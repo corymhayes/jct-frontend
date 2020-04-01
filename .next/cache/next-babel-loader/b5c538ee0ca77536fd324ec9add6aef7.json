@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Doughnut from './Details';","map":{"version":3,"sources":["/Users/cor-eee/Projects/jct-next/components/DoughnutAlarms.js"],"names":["Doughnut"],"mappings":"AAAA,OAAOA,QAAP,MAAqB,WAArB","sourcesContent":["import Doughnut from './Details'"]},"metadata":{},"sourceType":"module"}
