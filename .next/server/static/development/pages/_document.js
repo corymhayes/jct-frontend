@@ -1101,25 +1101,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
     } finally {
       sheet.seal();
     }
-  } // render() {
-  //   return(
-  //     <Html>
-  //       <Head>
-  //         <meta charSet="utf-8" />
-  //         <meta
-  //           name="viewport"
-  //           content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
-  //         />
-  //       </Head>
-  //       <body>
-  //         <GlobalStyle />
-  //         <Main />
-  //         <NextScript />
-  //       </body>
-  //     </Html>
-  //   )
-  // }
-
+  }
 
 }
 
