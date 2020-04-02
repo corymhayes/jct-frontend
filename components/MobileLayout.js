@@ -52,7 +52,6 @@ const MobileLayout = props => (
         padding: 0;
         box-sizing: border-box;
         font-size: 10px;
-        font-family: sans-serif;
         font-weight: 100;
       }
 

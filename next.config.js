@@ -1,13 +1,45 @@
-const withFonts = require('next-fonts')
-module.exports = withFonts({
-  webpack(config, options){
-    return config
-  }
-})
+// const withFonts = require('next-fonts')
+// module.exports = withFonts({
+//   webpack(config, options){
+//     return config
+//   }
+// })
 
-const withCSS = require('@zeit/next-css')
-module.exports = withCSS({
-  cssLoaderOptions: {
-    url: false
-  }
-})
+// const withCSS = require('@zeit/next-css')
+// module.exports = withCSS({
+//   cssLoaderOptions: {
+//     url: false
+//   }
+// })
+
+
+const withCss = require("@zeit/next-css");
+const withFonts = require("next-fonts");
+
+module.exports = withFonts(
+  withCss({
+    webpack: (config, { isServer }) => {
+      if (isServer) {
+        const antStyles = /antd\/.*?\/style\/css.*?/;
+        const origExternals = [...config.externals];
+        config.externals = [
+          (context, request, callback) => {
+            if (request.match(antStyles)) return callback();
+            if (typeof origExternals[0] === "function") {
+              origExternals[0](context, request, callback);
+            } else {
+              callback();
+            }
+          },
+          ...(typeof origExternals[0] === "function" ? [] : origExternals)
+        ];
+
+        config.module.rules.unshift({
+          test: antStyles,
+          use: "null-loader"
+        });
+      }
+      return config;
+    }
+  })
+);
