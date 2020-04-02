@@ -13,7 +13,7 @@ const MobileMainContainer = styled.main`
 `
 
 const MobileCompanyContainer = styled.div`
-  margin: 3rem 0;
+  margin: 5.5rem 0;
   display: flex;
   flex-flow: column;
   justify-content: center;
