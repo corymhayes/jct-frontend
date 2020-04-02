@@ -24,7 +24,6 @@ const MobileCompanyName = styled.h1`
   font-size: 3rem;
   font-weight: 600;
   color: ${color.jctWhite};
-  font-family: 'Industry';
 `
 
 
@@ -32,13 +31,11 @@ const MobileSiteName = styled.h2`
   font-size: 2rem;
   font-weight: 600;
   color: #FF7E26;
-  font-family: 'Industry';
 `
 
 
 const MobileLayout = props => (
   <>
-
     <MobileMainContainer>
       <MobileCompanyContainer>
         <MobileCompanyName>{props.company_name}</MobileCompanyName>

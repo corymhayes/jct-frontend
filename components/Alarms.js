@@ -7,7 +7,6 @@ const Container = styled.div`
 `
 
 const Title = styled.h3`
-  font-family: 'Industry';
   font-weight: bold;
   color: ${color.jctOrange};
   font-size: 1.8rem;
@@ -21,7 +20,6 @@ const AlarmList = styled.ul`
 const AlarmListItem = styled.li`
   color: ${color.jctLightGray};
   font-size: 1.8rem;
-  font-family: 'Industry';
   margin-bottom: .25rem;
 `
 

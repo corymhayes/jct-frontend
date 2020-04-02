@@ -31,14 +31,12 @@ const CompanyName = styled.h1`
     font-size: 6rem;
     font-weight: 600;
     color: #efefef;
-    font-family: 'Industry';
   }
   
   @media ${retina.laptop} {
     font-size: 4rem;
     font-weight: 600;
     color: #efefef;
-    font-family: 'Industry';
   }
 `
 
@@ -47,20 +45,17 @@ const SiteName = styled.h2`
   font-size: 4rem;
   font-weight: 600;
   color: #FF7E26;
-  font-family: 'Industry';
 
   @media ${standard.desktop} {
     font-size: 4rem;
     font-weight: 600;
     color: #FF7E26;
-    font-family: 'Industry';
   }
   
   @media ${retina.laptop} {
     font-size: 2.75rem;
     font-weight: 600;
     color: #FF7E26;
-    font-family: 'Industry';
   }
 `
 
@@ -104,14 +99,12 @@ const Layout = props => (
         padding: 0;
         box-sizing: border-box;
         font-size: 10px;
-        font-family: sans-serif;
-        font-weight: 100;
       }
-
+      
       body{
         background-color: #292929;
       }
-
+      
       #__next{
         height: 100%;
         width: 100%;

@@ -9,11 +9,9 @@ const DetailsContainer = styled.div`
   flex-flow: column;
   background-color: ${color.jctWhite};
   padding: 1rem;
-  // width: 300px;
 `
 
 const DetailsName = styled.h1`
-  font-family: 'Industry';
   color: #FF7E26;
   font-size: 3rem;
   font-weight: bold;

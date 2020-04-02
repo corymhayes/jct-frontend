@@ -1077,31 +1077,6 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_2__["createGlobalStyle"]`
-  @font-face{
-    font-family: 'Industry';
-    src: url('/public/fonts/Industry-Bold.eot');
-    src: url('/public/fonts/Industry-Bold.eot?#iefix') format('embedded-opentype'),
-        url('/public/fonts/Industry-Bold.woff2') format('woff2'),
-        url('/public/fonts/Industry-Bold.woff') format('woff'),
-        url('/public/fonts/Industry-Bold.ttf') format('truetype'),
-        url('/public/fonts/Industry-Bold.svg#Industry-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  @font-face{
-    font-family: 'Industry';
-    src: url('/public/fonts/Industry-Medium.eot');
-    src: url('/public/fonts/Industry-Medium.eot?#iefix') format('embedded-opentype'),
-        url('/public/fonts/Industry-Medium.woff2') format('woff2'),
-        url('/public/fonts/Industry-Medium.woff') format('woff'),
-        url('/public/fonts/Industry-Medium.ttf') format('truetype'),
-        url('/public/fonts/Industry-Medium.svg#Industry-Medium') format('svg');
-    font-weight: 500;
-    font-style: normal;
-  }
-`;
 class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
   static async getInitialProps(ctx) {
     const sheet = new styled_components__WEBPACK_IMPORTED_MODULE_2__["ServerStyleSheet"]();
@@ -1113,7 +1088,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 37,
+            lineNumber: 11,
             columnNumber: 59
           }
         })))
@@ -1126,70 +1101,25 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
     } finally {
       sheet.seal();
     }
-  }
+  } // render() {
+  //   return(
+  //     <Html>
+  //       <Head>
+  //         <meta charSet="utf-8" />
+  //         <meta
+  //           name="viewport"
+  //           content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
+  //         />
+  //       </Head>
+  //       <body>
+  //         <GlobalStyle />
+  //         <Main />
+  //         <NextScript />
+  //       </body>
+  //     </Html>
+  //   )
+  // }
 
-  render() {
-    return __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Html"], {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57,
-        columnNumber: 7
-      }
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58,
-        columnNumber: 9
-      }
-    }, __jsx("meta", {
-      charSet: "utf-8",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59,
-        columnNumber: 11
-      }
-    }), __jsx("meta", {
-      name: "viewport",
-      content: "width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60,
-        columnNumber: 11
-      }
-    })), __jsx("body", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65,
-        columnNumber: 9
-      }
-    }, __jsx(GlobalStyle, {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66,
-        columnNumber: 11
-      }
-    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 67,
-        columnNumber: 11
-      }
-    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 68,
-        columnNumber: 11
-      }
-    })));
-  }
 
 }
 

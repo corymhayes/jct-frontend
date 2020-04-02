@@ -61,14 +61,12 @@ const Volume = styled.div`
 `
 
 const CurrentVolume = styled.div`
-  font-family: 'Industry';
   font-size: 2.5rem;
   color: ${color.jctDarkGray};
   font-weight: bold;
 `
 
 const CurrentVolumeLabel = styled.div`
-  font-family: 'Industry';
   font-size: 1.5rem;
   color: ${color.jctLightGray};
 `
