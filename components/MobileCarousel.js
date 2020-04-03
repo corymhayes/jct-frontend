@@ -5,8 +5,8 @@ import { standard, retina, color } from '../public/screensizes'
 const MobileCarousel = props => (
   <Carousel
     cellAlign={ 'center' }
-    cellSpacing={ 20 }
-    slideWidth={ '300px' }
+    cellSpacing={ 15 }
+    slideWidth={ '325px' }
     withoutControls
   >
     { props.children }
@@ -14,3 +14,7 @@ const MobileCarousel = props => (
 )
 
 export default MobileCarousel
+
+const StyledCarousel = styled(Carousel)`
+  background-color: blue;
+`

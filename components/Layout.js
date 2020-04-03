@@ -95,9 +95,9 @@ const SiteDetailsContainer = styled.div`
   }
   
   @media ${standard.tabletL}{
-    padding: 4rem 12rem 4rem 4rem;
+    padding: 4rem 13rem 4rem 4rem;
     grid: auto-flow / repeat(3, 33%);
-    grid-gap: 4rem 4rem;
+    grid-gap: 5rem 5rem;
   }
   
   @media ${standard.desktop} {

@@ -8,7 +8,10 @@ const DetailsContainer = styled.div`
   display: flex;
   flex-flow: column;
   background-color: ${color.jctWhite};
-  padding: 1rem;
+
+  @media ${retina.mobile}{
+    padding: 3rem;
+  }
 `
 
 const DetailsName = styled.h1`
