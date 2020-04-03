@@ -20,7 +20,7 @@ const DetailsName = styled.h1`
 
 const Underline = styled.div`
   height: 2px;
-  background-color: rgba(41,41,41,.15)
+  background-color: rgba(41,41,41,.15);
 `
 
 const Details = props => (

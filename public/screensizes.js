@@ -16,23 +16,23 @@ const size = {
 }
 
 const standard = {
-  mobileS: `screen and (min-width: ${size.mobileS}) and (-webkit-min-device-pixel-ratio: 1)`,
-  mobileM: `screen and (min-width: ${size.mobileM}) and (-webkit-min-device-pixel-ratio: 1)`,
-  mobileL: `screen and (min-width: ${size.mobileL}) and (-webkit-min-device-pixel-ratio: 1)`,
-  tablet: `screen and (min-width: ${size.tablet}) and (-webkit-min-device-pixel-ratio: 1)`,
-  laptop: `screen and (min-width: ${size.laptop}) and (-webkit-min-device-pixel-ratio: 1)`,
-  laptopL: `screen and (min-width: ${size.laptopL}) and (-webkit-min-device-pixel-ratio: 1)`,
-  desktop: `screen and (min-width: ${size.desktop}) and (-webkit-min-device-pixel-ratio: 1)`,
+  mobileS: `only screen and (min-width: ${size.mobileS}) and (-webkit-min-device-pixel-ratio: 1)`,
+  mobileM: `only screen and (min-width: ${size.mobileM}) and (-webkit-min-device-pixel-ratio: 1)`,
+  mobileL: `only screen and (min-width: ${size.mobileL}) and (-webkit-min-device-pixel-ratio: 1)`,
+  tablet: `only screen and (min-width: ${size.tablet}) and (max-width: ${size.laptop}) and (-webkit-min-device-pixel-ratio: 1)`,
+  laptop: `only screen and (min-width: ${size.laptop}) and (-webkit-min-device-pixel-ratio: 1)`,
+  laptopL: `only screen and (min-width: ${size.laptopL}) and (-webkit-min-device-pixel-ratio: 1)`,
+  desktop: `only screen and (min-width: ${size.desktop}) and (-webkit-min-device-pixel-ratio: 1)`,
 };
 
 const retina = {
-  mobileS: `screen and (min-width: ${size.mobileS}) and (-webkit-min-device-pixel-ratio: 2)`,
-  mobileM: `screen and (min-width: ${size.mobileM}) and (-webkit-min-device-pixel-ratio: 2)`,
-  mobileL: `screen and (min-width: ${size.mobileL}) and (-webkit-min-device-pixel-ratio: 2)`,
-  tablet: `screen and (min-width: ${size.tablet}) and (-webkit-min-device-pixel-ratio: 2)`,
-  laptop: `screen and (min-width: ${size.laptop}) and (-webkit-min-device-pixel-ratio: 2)`,
-  laptopL: `screen and (min-width: ${size.laptopL}) and (-webkit-min-device-pixel-ratio: 2)`,
-  desktop: `screen and (min-width: ${size.desktop}) and (-webkit-min-device-pixel-ratio: 2)`,
+  mobileS: `only screen and (min-width: ${size.mobileS}) and (-webkit-min-device-pixel-ratio: 2)`,
+  mobileM: `only screen and (min-width: ${size.mobileM}) and (-webkit-min-device-pixel-ratio: 2)`,
+  mobileL: `only screen and (min-width: ${size.mobileL}) and (-webkit-min-device-pixel-ratio: 2)`,
+  tablet: `only screen and (min-width: ${size.tablet}) and (max-width: ${size.laptop}) and (-webkit-min-device-pixel-ratio: 2)`,
+  laptop: `only screen and (min-width: ${size.laptop}) and (-webkit-min-device-pixel-ratio: 2)`,
+  laptopL: `only screen and (min-width: ${size.laptopL}) and (-webkit-min-device-pixel-ratio: 2)`,
+  desktop: `only screen and (min-width: ${size.desktop}) and (-webkit-min-device-pixel-ratio: 2)`,
 };
 
 export { standard, retina, color }
