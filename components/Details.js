@@ -10,7 +10,7 @@ const DetailsContainer = styled.div`
   background-color: ${color.jctWhite};
 
   @media ${retina.mobile}{
-    padding: 3rem;
+    padding: 2rem;
   }
 `
 

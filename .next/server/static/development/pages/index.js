@@ -196,7 +196,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const DetailsContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Details__DetailsContainer",
   componentId: "sc-1ln1fjq-0"
-})(["display:flex;flex-flow:column;background-color:", ";@media ", "{padding:3rem;}"], _public_screensizes__WEBPACK_IMPORTED_MODULE_2__["color"].jctWhite, _public_screensizes__WEBPACK_IMPORTED_MODULE_2__["retina"].mobile);
+})(["display:flex;flex-flow:column;background-color:", ";@media ", "{padding:2rem;}"], _public_screensizes__WEBPACK_IMPORTED_MODULE_2__["color"].jctWhite, _public_screensizes__WEBPACK_IMPORTED_MODULE_2__["retina"].mobile);
 const DetailsName = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1.withConfig({
   displayName: "Details__DetailsName",
   componentId: "sc-1ln1fjq-1"
