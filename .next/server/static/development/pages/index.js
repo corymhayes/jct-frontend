@@ -525,7 +525,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const MobileCarousel = props => __jsx(nuka_carousel__WEBPACK_IMPORTED_MODULE_2___default.a, {
   cellAlign: 'center',
-  slidesToShow: 3,
   cellSpacing: 20,
   slideWidth: '300px',
   withoutControls: true,
@@ -781,7 +780,7 @@ const Home = props => {
       columnNumber: 13
     }
   }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    name: "Water Tank 1",
+    name: "Oil Tank 3",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -789,11 +788,27 @@ const Home = props => {
       columnNumber: 13
     }
   }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    name: "Water Tank 2",
+    name: "Water Tank 1",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23,
+      columnNumber: 13
+    }
+  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    name: "Water Tank 2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 13
+    }
+  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    name: "Water Tank 3",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
       columnNumber: 13
     }
   })) : __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -802,7 +817,7 @@ const Home = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 28,
       columnNumber: 11
     }
   }, __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -810,7 +825,7 @@ const Home = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 29,
       columnNumber: 13
     }
   }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -818,7 +833,7 @@ const Home = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 30,
       columnNumber: 13
     }
   }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -826,7 +841,7 @@ const Home = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 31,
       columnNumber: 13
     }
   }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -834,7 +849,7 @@ const Home = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 32,
       columnNumber: 13
     }
   }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -842,7 +857,7 @@ const Home = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 33,
       columnNumber: 13
     }
   }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -850,7 +865,7 @@ const Home = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 34,
       columnNumber: 13
     }
   })));

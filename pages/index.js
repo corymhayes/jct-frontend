@@ -19,8 +19,10 @@ const Home = props => {
           <MobileLayout company_name="Doghouse Oil & Gas" site_name="Anchor Battery">
             <Details name="Oil Tank 1" />
             <Details name="Oil Tank 2" />
+            <Details name="Oil Tank 3" />
             <Details name="Water Tank 1" />
             <Details name="Water Tank 2" />
+            <Details name="Water Tank 3" />
           </MobileLayout>
         :
           <Layout company_name="Doghouse Oil & Gas" site_name="Anchor Battery">
