@@ -3,21 +3,25 @@ import { standard, retina, color } from '../public/screensizes'
 
 const MainContainer = styled.main`
   height: 100vh;
-  display: flex;
-  flex-flow: column;
-
+  display: grid;
   
-  @media ${standard.tablet}{
+  @media ${standard.tabletP}{
+    width: 80%;
+    grid-template-rows: 10% 90%;
+  }
+  
+  @media ${standard.tabletL}{
     width: 90%;
+    grid-template-rows: 15% 85%;
   }
 
   @media ${standard.desktop} {
     width: 50%;
   }
   
-  
-  @media ${retina.laptop} {
-    width: 75%;
+  @media ${retina.laptopM} {
+    width: 65%;
+    grid-template-rows: 10% 90%;
   }
 
 `
@@ -27,6 +31,7 @@ const CompanyContainer = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: center;
+  
 
   @media ${standard.tablet}{
     margin: 4rem 0 4rem 1rem;
@@ -36,7 +41,7 @@ const CompanyContainer = styled.div`
     margin: 5rem 0 5rem 1rem;
   }
   
-  @media ${retina.laptop}{
+  @media ${retina.laptopM}{
     margin: 3rem 0 3rem 1rem;
   }
 `
@@ -53,7 +58,7 @@ const CompanyName = styled.h1`
     font-size: 5rem;
   }
   
-  @media ${retina.laptop} {
+  @media ${retina.laptopM} {
     font-size: 4rem;
   }
 `
@@ -71,7 +76,7 @@ const SiteName = styled.h2`
     font-size: 3rem;
   }
   
-  @media ${retina.laptop} {
+  @media ${retina.laptopM} {
     font-size: 2.75rem;
   }
 `
@@ -83,10 +88,16 @@ const SiteDetailsContainer = styled.div`
   overflow: scroll;
   display: grid;
   
-  @media ${standard.tablet}{
-    padding: 6rem 12rem 6rem 6rem;
+  @media ${standard.tabletP}{
+    padding: 3rem 6rem 3rem 3rem;
     grid: auto-flow / repeat(2, 50%);
-    grid-gap: 4rem 6rem;
+    grid-gap: 3rem 3rem;
+  }
+  
+  @media ${standard.tabletL}{
+    padding: 4rem 12rem 4rem 4rem;
+    grid: auto-flow / repeat(3, 33%);
+    grid-gap: 4rem 4rem;
   }
   
   @media ${standard.desktop} {
@@ -96,10 +107,10 @@ const SiteDetailsContainer = styled.div`
 
   }
   
-  @media ${retina.laptop} {
-    padding: 6rem 20rem 0 6rem;
+  @media ${retina.laptopM} {
+    padding: 5rem 19rem 0 5rem;
     grid: auto-flow / repeat(3, 33%);
-    grid-gap: 8rem 7rem;
+    grid-gap: 1rem 7rem;
   }
 `
 

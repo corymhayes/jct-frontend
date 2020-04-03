@@ -16,6 +16,18 @@ const DetailsName = styled.h1`
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
+
+  @media ${standard.tabletP}{
+    font-size: 2rem;
+  }
+
+  @media ${standard.tabletL}{
+    font-size: 2rem;
+  }
+
+  @media ${retina.laptopM}{
+    font-size: 3rem;
+  }
 `
 
 const Underline = styled.div`
