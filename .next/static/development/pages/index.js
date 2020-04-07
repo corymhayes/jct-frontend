@@ -140,6 +140,10 @@ var Details = function Details(props) {
       columnNumber: 5
     }
   }), __jsx(_components_DoughnutAlarms__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    currentValue: props.currentValue,
+    totalValue: props.totalValue,
+    alarmOn: props.alarmOn,
+    alarmOff: props.alarmOff,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -147,10 +151,17 @@ var Details = function Details(props) {
       columnNumber: 5
     }
   }), __jsx(_components_Trend__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    mon: props.mon,
+    tue: props.tue,
+    wed: props.wed,
+    thu: props.thu,
+    fri: props.fri,
+    sat: props.sat,
+    sun: props.sun,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 51,
       columnNumber: 5
     }
   }));
@@ -192,8 +203,8 @@ var DoughnutAlarms = function DoughnutAlarms(props) {
       columnNumber: 3
     }
   }, __jsx(_DoughnutChart__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    currentValue: "8.00",
-    totalValue: "16",
+    currentValue: props.currentValue,
+    totalValue: props.totalValue,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -201,8 +212,8 @@ var DoughnutAlarms = function DoughnutAlarms(props) {
       columnNumber: 5
     }
   }), __jsx(_Alarms__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    on: "8.00",
-    off: "12.00",
+    on: props.alarmOn,
+    off: props.alarmOff,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -355,11 +366,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 var MainContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].main.withConfig({
   displayName: "Layout__MainContainer",
   componentId: "sc-1xtzfs7-0"
-})(["height:100vh;display:grid;@media ", "{width:80%;grid-template-rows:10% 90%;}@media ", "{width:90%;grid-template-rows:15% 85%;}@media ", "{width:50%;}@media ", "{width:65%;grid-template-rows:10% 90%;}"], _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["standard"].tabletP, _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["standard"].tabletL, _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["standard"].desktop, _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["retina"].laptopM);
+})(["height:100vh;display:grid;@media ", "{width:80%;grid-template-rows:12% 1fr;}@media ", "{width:90%;grid-template-rows:15% 85%;}@media ", "{max-width:50%;grid-template-rows:10% 1fr;}@media ", "{width:65%;grid-template-rows:10% 90%;}"], _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["standard"].tabletP, _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["standard"].tabletL, _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["standard"].desktop, _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["retina"].laptopM);
 var CompanyContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "Layout__CompanyContainer",
   componentId: "sc-1xtzfs7-1"
-})(["margin:2rem 0 2rem 1rem;display:flex;flex-flow:column;justify-content:center;@media ", "{margin:4rem 0 4rem 1rem;}@media ", "{margin:5rem 0 5rem 1rem;}@media ", "{margin:3rem 0 3rem 1rem;}"], _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["standard"].tablet, _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["standard"].desktop, _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["retina"].laptopM);
+})(["display:flex;flex-flow:column;justify-content:center;margin-left:1rem;"]);
 var CompanyName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h1.withConfig({
   displayName: "Layout__CompanyName",
   componentId: "sc-1xtzfs7-2"
@@ -378,41 +389,41 @@ var Layout = function Layout(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120,
+      lineNumber: 108,
       columnNumber: 5
     }
   }, __jsx(CompanyContainer, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121,
+      lineNumber: 109,
       columnNumber: 7
     }
   }, __jsx(CompanyName, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122,
+      lineNumber: 110,
       columnNumber: 9
     }
   }, props.company_name), __jsx(SiteName, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123,
+      lineNumber: 111,
       columnNumber: 9
     }
   }, props.site_name)), __jsx(SiteDetailsContainer, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125,
+      lineNumber: 113,
       columnNumber: 7
     }
   }, props.children)), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "2461236782",
     __self: _this
-  }, "*{margin:0;padding:0;box-sizing:border-box;font-size:10px;}body{background-color:#292929;}#__next{height:100%;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jb3ItZWVlL1Byb2plY3RzL2pjdC1uZXh0L2NvbXBvbmVudHMvTGF5b3V0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWlJdUIsQUFHa0IsQUFPZ0IsQUFJYixTQVZGLEdBV0MsT0FWVyxJQVdULEVBTGYsZ0JBTGlCLGVBQ2pCLHlDQVVtQiwrREFDRSw2RkFDSSxtR0FDekIiLCJmaWxlIjoiL1VzZXJzL2Nvci1lZWUvUHJvamVjdHMvamN0LW5leHQvY29tcG9uZW50cy9MYXlvdXQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgc3R5bGVkIGZyb20gJ3N0eWxlZC1jb21wb25lbnRzJ1xuaW1wb3J0IHsgc3RhbmRhcmQsIHJldGluYSwgY29sb3IgfSBmcm9tICcuLi9wdWJsaWMvc2NyZWVuc2l6ZXMnXG5cbmNvbnN0IE1haW5Db250YWluZXIgPSBzdHlsZWQubWFpbmBcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgZGlzcGxheTogZ3JpZDtcbiAgXG4gIEBtZWRpYSAke3N0YW5kYXJkLnRhYmxldFB9e1xuICAgIHdpZHRoOiA4MCU7XG4gICAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiAxMCUgOTAlO1xuICB9XG4gIFxuICBAbWVkaWEgJHtzdGFuZGFyZC50YWJsZXRMfXtcbiAgICB3aWR0aDogOTAlO1xuICAgIGdyaWQtdGVtcGxhdGUtcm93czogMTUlIDg1JTtcbiAgfVxuXG4gIEBtZWRpYSAke3N0YW5kYXJkLmRlc2t0b3B9IHtcbiAgICB3aWR0aDogNTAlO1xuICB9XG4gIFxuICBAbWVkaWEgJHtyZXRpbmEubGFwdG9wTX0ge1xuICAgIHdpZHRoOiA2NSU7XG4gICAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiAxMCUgOTAlO1xuICB9XG5cbmBcblxuY29uc3QgQ29tcGFueUNvbnRhaW5lciA9IHN0eWxlZC5kaXZgXG4gIG1hcmdpbjogMnJlbSAwIDJyZW0gMXJlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1mbG93OiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBcblxuICBAbWVkaWEgJHtzdGFuZGFyZC50YWJsZXR9e1xuICAgIG1hcmdpbjogNHJlbSAwIDRyZW0gMXJlbTtcbiAgfVxuICBcbiAgQG1lZGlhICR7c3RhbmRhcmQuZGVza3RvcH17XG4gICAgbWFyZ2luOiA1cmVtIDAgNXJlbSAxcmVtO1xuICB9XG4gIFxuICBAbWVkaWEgJHtyZXRpbmEubGFwdG9wTX17XG4gICAgbWFyZ2luOiAzcmVtIDAgM3JlbSAxcmVtO1xuICB9XG5gXG5cbmNvbnN0IENvbXBhbnlOYW1lID0gc3R5bGVkLmgxYFxuICBmb250LXdlaWdodDogNjAwO1xuICBjb2xvcjogI2VmZWZlZjtcblxuICBAbWVkaWEgJHtzdGFuZGFyZC50YWJsZXR9IHtcbiAgICBmb250LXNpemU6IDNyZW07XG4gIH1cblxuICBAbWVkaWEgJHtzdGFuZGFyZC5kZXNrdG9wfSB7XG4gICAgZm9udC1zaXplOiA1cmVtO1xuICB9XG4gIFxuICBAbWVkaWEgJHtyZXRpbmEubGFwdG9wTX0ge1xuICAgIGZvbnQtc2l6ZTogNHJlbTtcbiAgfVxuYFxuXG5cbmNvbnN0IFNpdGVOYW1lID0gc3R5bGVkLmgyYFxuICBmb250LXdlaWdodDogNjAwO1xuICBjb2xvcjogI0ZGN0UyNjtcblxuICBAbWVkaWEgJHtzdGFuZGFyZC50YWJsZXR9IHtcbiAgICBmb250LXNpemU6IDJyZW07XG4gIH1cbiAgXG4gIEBtZWRpYSAke3N0YW5kYXJkLmRlc2t0b3B9IHtcbiAgICBmb250LXNpemU6IDNyZW07XG4gIH1cbiAgXG4gIEBtZWRpYSAke3JldGluYS5sYXB0b3BNfSB7XG4gICAgZm9udC1zaXplOiAyLjc1cmVtO1xuICB9XG5gXG5cbmNvbnN0IFNpdGVEZXRhaWxzQ29udGFpbmVyID0gc3R5bGVkLmRpdmBcbiAgYmFja2dyb3VuZC1jb2xvcjogJHtjb2xvci5qY3RXaGl0ZX07XG4gIGhlaWdodDogYXV0bztcbiAgcGFkZGluZzogOXJlbSAxOHJlbSA5cmVtIDA7XG4gIG92ZXJmbG93OiBzY3JvbGw7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIFxuICBAbWVkaWEgJHtzdGFuZGFyZC50YWJsZXRQfXtcbiAgICBwYWRkaW5nOiAzcmVtIDZyZW0gM3JlbSAzcmVtO1xuICAgIGdyaWQ6IGF1dG8tZmxvdyAvIHJlcGVhdCgyLCA1MCUpO1xuICAgIGdyaWQtZ2FwOiAzcmVtIDNyZW07XG4gIH1cbiAgXG4gIEBtZWRpYSAke3N0YW5kYXJkLnRhYmxldEx9e1xuICAgIHBhZGRpbmc6IDRyZW0gMTNyZW0gNHJlbSA0cmVtO1xuICAgIGdyaWQ6IGF1dG8tZmxvdyAvIHJlcGVhdCgzLCAzMyUpO1xuICAgIGdyaWQtZ2FwOiA1cmVtIDVyZW07XG4gIH1cbiAgXG4gIEBtZWRpYSAke3N0YW5kYXJkLmRlc2t0b3B9IHtcbiAgICBwYWRkaW5nOiA2cmVtIDI3cmVtIDZyZW0gNnJlbTtcbiAgICBncmlkOiBhdXRvLWZsb3cgLyByZXBlYXQoNCwgMjUlKTtcbiAgICBncmlkLWdhcDogMTByZW0gN3JlbTtcblxuICB9XG4gIFxuICBAbWVkaWEgJHtyZXRpbmEubGFwdG9wTX0ge1xuICAgIHBhZGRpbmc6IDVyZW0gMTlyZW0gMCA1cmVtO1xuICAgIGdyaWQ6IGF1dG8tZmxvdyAvIHJlcGVhdCgzLCAzMyUpO1xuICAgIGdyaWQtZ2FwOiAxcmVtIDdyZW07XG4gIH1cbmBcblxuY29uc3QgTGF5b3V0ID0gcHJvcHMgPT4gKFxuICA8PlxuXG4gICAgPE1haW5Db250YWluZXI+XG4gICAgICA8Q29tcGFueUNvbnRhaW5lcj5cbiAgICAgICAgPENvbXBhbnlOYW1lPntwcm9wcy5jb21wYW55X25hbWV9PC9Db21wYW55TmFtZT5cbiAgICAgICAgPFNpdGVOYW1lPntwcm9wcy5zaXRlX25hbWV9PC9TaXRlTmFtZT5cbiAgICAgIDwvQ29tcGFueUNvbnRhaW5lcj5cbiAgICAgIDxTaXRlRGV0YWlsc0NvbnRhaW5lcj5cbiAgICAgICAgeyBwcm9wcy5jaGlsZHJlbiB9XG4gICAgICA8L1NpdGVEZXRhaWxzQ29udGFpbmVyPlxuICAgIDwvTWFpbkNvbnRhaW5lcj5cbiAgICBcbiAgICA8c3R5bGUganN4IGdsb2JhbD57YFxuICAgICAgKntcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICAgICAgICBmb250LXNpemU6IDEwcHg7XG4gICAgICB9XG4gICAgICBcbiAgICAgIGJvZHl7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMyOTI5Mjk7XG4gICAgICB9XG4gICAgICBcbiAgICAgICNfX25leHR7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGZsZXgtZmxvdzogY29sdW1uO1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG5cbiAgPC8+XG4pXG5cbmV4cG9ydCBkZWZhdWx0IExheW91dCJdfQ== */\n/*@ sourceURL=/Users/cor-eee/Projects/jct-next/components/Layout.js */"));
+  }, "*{margin:0;padding:0;box-sizing:border-box;font-size:10px;}body{background-color:#292929;}#__next{height:100%;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jb3ItZWVlL1Byb2plY3RzL2pjdC1uZXh0L2NvbXBvbmVudHMvTGF5b3V0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXFIdUIsQUFHa0IsQUFPZ0IsQUFJYixTQVZGLEdBV0MsT0FWVyxJQVdULEVBTGYsZ0JBTGlCLGVBQ2pCLHlDQVVtQiwrREFDRSw2RkFDSSxtR0FDekIiLCJmaWxlIjoiL1VzZXJzL2Nvci1lZWUvUHJvamVjdHMvamN0LW5leHQvY29tcG9uZW50cy9MYXlvdXQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgc3R5bGVkIGZyb20gJ3N0eWxlZC1jb21wb25lbnRzJ1xuaW1wb3J0IHsgc3RhbmRhcmQsIHJldGluYSwgY29sb3IgfSBmcm9tICcuLi9wdWJsaWMvc2NyZWVuc2l6ZXMnXG5cbmNvbnN0IE1haW5Db250YWluZXIgPSBzdHlsZWQubWFpbmBcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgZGlzcGxheTogZ3JpZDtcbiAgXG4gIEBtZWRpYSAke3N0YW5kYXJkLnRhYmxldFB9e1xuICAgIHdpZHRoOiA4MCU7XG4gICAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiAxMiUgMWZyO1xuICB9XG4gIFxuICBAbWVkaWEgJHtzdGFuZGFyZC50YWJsZXRMfXtcbiAgICB3aWR0aDogOTAlO1xuICAgIGdyaWQtdGVtcGxhdGUtcm93czogMTUlIDg1JTtcbiAgfVxuXG4gIEBtZWRpYSAke3N0YW5kYXJkLmRlc2t0b3B9IHtcbiAgICBtYXgtd2lkdGg6IDUwJTtcbiAgICBncmlkLXRlbXBsYXRlLXJvd3M6IDEwJSAxZnI7XG4gIH1cbiAgXG4gIEBtZWRpYSAke3JldGluYS5sYXB0b3BNfSB7XG4gICAgd2lkdGg6IDY1JTtcbiAgICBncmlkLXRlbXBsYXRlLXJvd3M6IDEwJSA5MCU7XG4gIH1cblxuYFxuXG5jb25zdCBDb21wYW55Q29udGFpbmVyID0gc3R5bGVkLmRpdmBcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1mbG93OiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBtYXJnaW4tbGVmdDogMXJlbTtcbmBcblxuY29uc3QgQ29tcGFueU5hbWUgPSBzdHlsZWQuaDFgXG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGNvbG9yOiAjZWZlZmVmO1xuXG4gIEBtZWRpYSAke3N0YW5kYXJkLnRhYmxldH0ge1xuICAgIGZvbnQtc2l6ZTogM3JlbTtcbiAgfVxuXG4gIEBtZWRpYSAke3N0YW5kYXJkLmRlc2t0b3B9IHtcbiAgICBmb250LXNpemU6IDVyZW07XG4gIH1cbiAgXG4gIEBtZWRpYSAke3JldGluYS5sYXB0b3BNfSB7XG4gICAgZm9udC1zaXplOiA0cmVtO1xuICB9XG5gXG5cblxuY29uc3QgU2l0ZU5hbWUgPSBzdHlsZWQuaDJgXG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGNvbG9yOiAjRkY3RTI2O1xuXG4gIEBtZWRpYSAke3N0YW5kYXJkLnRhYmxldH0ge1xuICAgIGZvbnQtc2l6ZTogMnJlbTtcbiAgfVxuICBcbiAgQG1lZGlhICR7c3RhbmRhcmQuZGVza3RvcH0ge1xuICAgIGZvbnQtc2l6ZTogM3JlbTtcbiAgfVxuICBcbiAgQG1lZGlhICR7cmV0aW5hLmxhcHRvcE19IHtcbiAgICBmb250LXNpemU6IDIuNzVyZW07XG4gIH1cbmBcblxuY29uc3QgU2l0ZURldGFpbHNDb250YWluZXIgPSBzdHlsZWQuZGl2YFxuICBiYWNrZ3JvdW5kLWNvbG9yOiAke2NvbG9yLmpjdFdoaXRlfTtcbiAgaGVpZ2h0OiBhdXRvO1xuICBwYWRkaW5nOiA5cmVtIDE4cmVtIDlyZW0gMDtcbiAgb3ZlcmZsb3c6IHNjcm9sbDtcbiAgZGlzcGxheTogZ3JpZDtcbiAgXG4gIEBtZWRpYSAke3N0YW5kYXJkLnRhYmxldFB9e1xuICAgIHBhZGRpbmc6IDNyZW0gNnJlbSAzcmVtIDNyZW07XG4gICAgZ3JpZDogYXV0by1mbG93IC8gcmVwZWF0KDIsIDUwJSk7XG4gICAgZ3JpZC1nYXA6IDNyZW0gM3JlbTtcbiAgfVxuICBcbiAgQG1lZGlhICR7c3RhbmRhcmQudGFibGV0TH17XG4gICAgcGFkZGluZzogNHJlbSAxM3JlbSA0cmVtIDRyZW07XG4gICAgZ3JpZDogYXV0by1mbG93IC8gcmVwZWF0KDMsIDMzJSk7XG4gICAgZ3JpZC1nYXA6IDVyZW0gNXJlbTtcbiAgfVxuICBcbiAgQG1lZGlhICR7c3RhbmRhcmQuZGVza3RvcH0ge1xuICAgIHBhZGRpbmc6IDZyZW0gMjdyZW0gNnJlbSA2cmVtO1xuICAgIGdyaWQ6IGF1dG8tZmxvdyAvIHJlcGVhdCg0LCAyNSUpO1xuICAgIGdyaWQtZ2FwOiAxMHJlbSA3cmVtO1xuXG4gIH1cbiAgXG4gIEBtZWRpYSAke3JldGluYS5sYXB0b3BNfSB7XG4gICAgcGFkZGluZzogNXJlbSAxOXJlbSAwIDVyZW07XG4gICAgZ3JpZDogYXV0by1mbG93IC8gcmVwZWF0KDMsIDMzJSk7XG4gICAgZ3JpZC1nYXA6IDFyZW0gN3JlbTtcbiAgfVxuYFxuXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG4gIDw+XG5cbiAgICA8TWFpbkNvbnRhaW5lcj5cbiAgICAgIDxDb21wYW55Q29udGFpbmVyPlxuICAgICAgICA8Q29tcGFueU5hbWU+e3Byb3BzLmNvbXBhbnlfbmFtZX08L0NvbXBhbnlOYW1lPlxuICAgICAgICA8U2l0ZU5hbWU+e3Byb3BzLnNpdGVfbmFtZX08L1NpdGVOYW1lPlxuICAgICAgPC9Db21wYW55Q29udGFpbmVyPlxuICAgICAgPFNpdGVEZXRhaWxzQ29udGFpbmVyPlxuICAgICAgICB7IHByb3BzLmNoaWxkcmVuIH1cbiAgICAgIDwvU2l0ZURldGFpbHNDb250YWluZXI+XG4gICAgPC9NYWluQ29udGFpbmVyPlxuICAgIFxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICAqe1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gICAgICAgIGZvbnQtc2l6ZTogMTBweDtcbiAgICAgIH1cbiAgICAgIFxuICAgICAgYm9keXtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzI5MjkyOTtcbiAgICAgIH1cbiAgICAgIFxuICAgICAgI19fbmV4dHtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgZmxleC1mbG93OiBjb2x1bW47XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cblxuICA8Lz5cbilcblxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0Il19 */\n/*@ sourceURL=/Users/cor-eee/Projects/jct-next/components/Layout.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -588,7 +599,7 @@ var Trend = function Trend(props) {
     return {
       labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
       datasets: [{
-        data: [4, 8, 6, 9, 11, 7, 9],
+        data: [props.mon, props.tue, props.wed, props.thu, props.fri, props.sat, props.sun],
         borderWidth: 2,
         borderColor: _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["color"].jctOrange,
         pointBackgroundColor: _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["color"].jctOrange,
@@ -41167,6 +41178,18 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
+/***/ "./node_modules/next/dist/build/polyfills/fetch/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/next/dist/build/polyfills/fetch/index.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals self */var fetch=self.fetch.bind(self);module.exports=fetch;module.exports.default=module.exports;
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/build/polyfills/object-assign.js":
 /*!***********************************************************************************************************************!*\
   !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_2adc2403d89adc16ead0 ***!
@@ -50760,14 +50783,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _components_MobileLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/MobileLayout */ "./components/MobileLayout.js");
-/* harmony import */ var _components_Details__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Details */ "./components/Details.js");
-/* harmony import */ var react_device_detect__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-device-detect */ "./node_modules/react-device-detect/main.js");
-/* harmony import */ var react_device_detect__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_device_detect__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var use_mobile_detect_hook__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! use-mobile-detect-hook */ "./node_modules/use-mobile-detect-hook/src/index.js");
-/* harmony import */ var use_mobile_detect_hook__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(use_mobile_detect_hook__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _public_screensizes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../public/screensizes */ "./public/screensizes.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _components_MobileLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/MobileLayout */ "./components/MobileLayout.js");
+/* harmony import */ var _components_Details__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Details */ "./components/Details.js");
+/* harmony import */ var react_device_detect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-device-detect */ "./node_modules/react-device-detect/main.js");
+/* harmony import */ var react_device_detect__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_device_detect__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var use_mobile_detect_hook__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! use-mobile-detect-hook */ "./node_modules/use-mobile-detect-hook/src/index.js");
+/* harmony import */ var use_mobile_detect_hook__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(use_mobile_detect_hook__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _public_screensizes__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../public/screensizes */ "./public/screensizes.js");
 
 
 var _this = undefined,
@@ -50783,147 +50808,97 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 var Home = function Home(props) {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, props.isMobileView ? __jsx(_components_MobileLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, props.isMobileView ? __jsx(_components_MobileLayout__WEBPACK_IMPORTED_MODULE_5__["default"], {
     company_name: "Doghouse Oil & Gas",
     site_name: "Anchor Battery",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 11
-    }
-  }, __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Oil Tank 1",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20,
-      columnNumber: 13
+      columnNumber: 11
     }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Oil Tank 2",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 13
-    }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Oil Tank 3",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 13
-    }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Water Tank 1",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 13
-    }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Water Tank 2",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 13
-    }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Water Tank 3",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 13
-    }
-  })) : __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, props.equipment.map(function (equip) {
+    return __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      key: equip.id,
+      name: equip.name,
+      currentValue: equip.currentLevel,
+      totalValue: equip.totalLevel,
+      alarmOn: equip.on_level,
+      alarmOff: equip.off_level,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23,
+        columnNumber: 17
+      }
+    });
+  })) : __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
     company_name: "Doghouse Oil & Gas",
     site_name: "Anchor Battery",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 35,
       columnNumber: 11
     }
-  }, __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Oil Tank 1",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
-    }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Oil Tank 2",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30,
-      columnNumber: 13
-    }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Oil Tank 3",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31,
-      columnNumber: 13
-    }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Water Tank 1",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 13
-    }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Water Tank 2",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 13
-    }
-  }), __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    name: "Water Tank 3",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 13
-    }
+  }, props.equipment.map(function (equip) {
+    return __jsx(_components_Details__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      key: equip.id,
+      name: equip.name,
+      currentValue: equip.currentLevel,
+      totalValue: equip.totalLevel,
+      alarmOn: equip.on_level,
+      alarmOff: equip.off_level,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38,
+        columnNumber: 17
+      }
+    });
   })));
 };
 
 Home.getInitialProps = function _callee(ctx) {
-  var isMobileView;
+  var _ctx$query, name, site, res, json, isMobileView;
+
   return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
+          _ctx$query = ctx.query, name = _ctx$query.name, site = _ctx$query.site;
+          _context.next = 3;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()("http://jct-systems.com/api/".concat(name, "/").concat(site)));
+
+        case 3:
+          res = _context.sent;
+          _context.next = 6;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(res.json());
+
+        case 6:
+          json = _context.sent;
+          console.log(json);
           isMobileView = ctx.req.headers['user-agent'].search(/Android|iPhone/i);
 
           if (!(isMobileView < 0)) {
-            _context.next = 5;
+            _context.next = 13;
             break;
           }
 
           return _context.abrupt("return", {
-            isMobileView: false
+            isMobileView: false,
+            equipment: json[1]
           });
 
-        case 5:
+        case 13:
           return _context.abrupt("return", {
-            isMobileView: true
+            isMobileView: true,
+            equipment: json[1]
           });
 
-        case 6:
+        case 14:
         case "end":
           return _context.stop();
       }
@@ -50990,7 +50965,7 @@ var retina = {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fcor-eee%2FProjects%2Fjct-next%2Fpages%2Findex.js ***!
   \****************************************************************************************************************************/
@@ -51013,5 +50988,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -7,7 +7,7 @@ const MainContainer = styled.main`
   
   @media ${standard.tabletP}{
     width: 80%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 12% 1fr;
   }
   
   @media ${standard.tabletL}{
@@ -16,7 +16,8 @@ const MainContainer = styled.main`
   }
 
   @media ${standard.desktop} {
-    width: 50%;
+    max-width: 50%;
+    grid-template-rows: 10% 1fr;
   }
   
   @media ${retina.laptopM} {
@@ -27,23 +28,10 @@ const MainContainer = styled.main`
 `
 
 const CompanyContainer = styled.div`
-  margin: 2rem 0 2rem 1rem;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  
-
-  @media ${standard.tablet}{
-    margin: 4rem 0 4rem 1rem;
-  }
-  
-  @media ${standard.desktop}{
-    margin: 5rem 0 5rem 1rem;
-  }
-  
-  @media ${retina.laptopM}{
-    margin: 3rem 0 3rem 1rem;
-  }
+  margin-left: 1rem;
 `
 
 const CompanyName = styled.h1`

@@ -6,8 +6,8 @@ import Alarms from './Alarms'
 
 const DoughnutAlarms = props => (
   <Container>
-    <DoughnutChart currentValue='8.00' totalValue='16' />
-    <Alarms on='8.00' off='12.00' />
+    <DoughnutChart currentValue={props.currentValue} totalValue={props.totalValue} />
+    <Alarms on={props.alarmOn} off={props.alarmOff} />
   </Container>
 )
 

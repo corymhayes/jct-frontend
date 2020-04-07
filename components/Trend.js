@@ -17,7 +17,7 @@ const Trend = props => {
     return {
       labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
       datasets: [{
-        data: [4, 8, 6, 9, 11, 7, 9],
+        data: [props.mon, props.tue, props.wed, props.thu, props.fri, props.sat, props.sun],
         borderWidth: 2,
         borderColor: color.jctOrange,
         pointBackgroundColor: color.jctOrange,

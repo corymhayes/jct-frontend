@@ -42,8 +42,21 @@ const Details = props => (
   <DetailsContainer>
     <DetailsName>{props.name}</DetailsName>
     <Underline />
-    <DoughnutAlarms />
-    <Trend />
+    <DoughnutAlarms 
+      currentValue={props.currentValue} 
+      totalValue={props.totalValue} 
+      alarmOn={props.alarmOn}
+      alarmOff={props.alarmOff}
+    />
+    <Trend 
+      mon={props.mon}
+      tue={props.tue}
+      wed={props.wed}
+      thu={props.thu}
+      fri={props.fri}
+      sat={props.sat}
+      sun={props.sun}
+    />
   </DetailsContainer>
 )
 

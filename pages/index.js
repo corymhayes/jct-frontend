@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import fetch from 'isomorphic-unfetch'
 
 import Layout from '../components/Layout'
 import MobileLayout from '../components/MobileLayout' 
@@ -17,21 +18,33 @@ const Home = props => {
       {
         props.isMobileView ?
           <MobileLayout company_name="Doghouse Oil & Gas" site_name="Anchor Battery">
-            <Details name="Oil Tank 1" />
-            <Details name="Oil Tank 2" />
-            <Details name="Oil Tank 3" />
-            <Details name="Water Tank 1" />
-            <Details name="Water Tank 2" />
-            <Details name="Water Tank 3" />
+            {
+              props.equipment.map(equip => (
+                <Details 
+                  key={equip.id} 
+                  name={equip.name}
+                  currentValue={equip.currentLevel}
+                  totalValue={equip.totalLevel}
+                  alarmOn={equip.on_level}
+                  alarmOff={equip.off_level}
+                />
+              ))
+            }
           </MobileLayout>
         :
           <Layout company_name="Doghouse Oil & Gas" site_name="Anchor Battery">
-            <Details name="Oil Tank 1"/>
-            <Details name="Oil Tank 2"/>
-            <Details name="Oil Tank 3"/>
-            <Details name="Water Tank 1"/>
-            <Details name="Water Tank 2"/>
-            <Details name="Water Tank 3"/>
+            {
+              props.equipment.map(equip => (
+                <Details 
+                  key={equip.id} 
+                  name={equip.name}
+                  currentValue={equip.currentLevel}
+                  totalValue={equip.totalLevel}
+                  alarmOn={equip.on_level}
+                  alarmOff={equip.off_level}
+                />
+              ))
+            }
           </Layout>
       }
     </>
@@ -39,12 +52,25 @@ const Home = props => {
 }
 
 Home.getInitialProps =  async ctx => {
+  const { name, site } = ctx.query
+  const res = await fetch(`http://jct-systems.com/api/${name}/${site}`);
+  const json = await res.json();
+
+  console.log(json);
+
   let isMobileView = ctx.req.headers['user-agent'].search(/Android|iPhone/i)
 
+
   if(isMobileView < 0){
-    return {isMobileView: false}
+    return {
+      isMobileView: false,
+      equipment: json[1]
+    }
   } else {
-    return {isMobileView: true}
+    return {
+      isMobileView: true,
+      equipment: json[1]
+    }
   }
 
 }
