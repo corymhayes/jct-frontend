@@ -58,8 +58,8 @@ const Home = props => {
   )
 }
 
-Home.getInitialProps =  async ctx => {
-  const { name, site } = ctx.query
+export async function getServerSideProps(ctx){
+  const { name, site } = ctx.params
   const res = await fetch(`http://jct-systems.com/api/${name}/${site}`);
   const json = await res.json();
 
@@ -68,13 +68,17 @@ Home.getInitialProps =  async ctx => {
 
   if(isMobileView < 0){
     return {
-      isMobileView: false,
-      equipment: json[1]
+      props: {
+        isMobileView: false,
+        equipment: json[1]
+      }
     }
   } else {
     return {
-      isMobileView: true,
-      equipment: json[1]
+      props: {
+        isMobileView: true,
+        equipment: json[1]
+      }
     }
   }
 

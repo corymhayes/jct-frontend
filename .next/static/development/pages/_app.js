@@ -6319,7 +6319,7 @@ var _jsxFileName = "/Users/cor-eee/Projects/jct-next/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  @font-face{\n    font-family: 'Industry';\n    src: url('/static/fonts/Industry-Bold.woff2') format('woff2'),\n         url('/static/fonts/Industry-Bold.woff') format('woff'),\n         url('/static/fonts/Industry-Bold.ttf') format('truetype');\n    font-weight: bold;\n    font-style: normal;\n  }\n\n  @font-face{\n    font-family: 'Industry';\n    src: url('/static/fonts/Industry-Medium.woff2') format('woff2'),\n         url('/static/fonts/Industry-Medium.woff') format('woff'),\n         url('/static/fonts/Industry-Medium.ttf') format('truetype'),\n         url('/static/fonts/Industry-Medium.svg#Industry-Medium') format('svg');\n    font-weight: 500;\n    font-style: normal;\n  }\n\n  body{\n    font-family: 'Industry', sans-serif;\n  }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  @font-face{\n    font-family: 'Industry';\n    src: url('/static/fonts/Industry-Bold.woff2') format('woff2'),\n         url('/static/fonts/Industry-Bold.woff') format('woff'),\n         url('/static/fonts/Industry-Bold.ttf') format('truetype');\n    font-weight: bold;\n    font-style: normal;\n  }\n\n  @font-face{\n    font-family: 'Industry';\n    src: url('/static/fonts/Industry-Medium.woff2') format('woff2'),\n         url('/static/fonts/Industry-Medium.woff') format('woff'),\n         url('/static/fonts/Industry-Medium.ttf') format('truetype'),\n         url('/static/fonts/Industry-Medium.svg#Industry-Medium') format('svg');\n    font-weight: 500;\n    font-style: normal;\n  }\n\n  *{\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    font-size: 10px;\n  }\n  \n  body{\n    background-color: #292929;\n    font-family: 'Industry', sans-serif;\n  }\n  \n  #__next{\n    height: 100%;\n    width: 100%;\n    display: flex;\n    flex-flow: column;\n    align-items: center;\n    justify-content: center;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -6338,15 +6338,15 @@ function MyApp(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 5
+      lineNumber: 49,
+      columnNumber: 7
     }
   }), __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 5
+      lineNumber: 50,
+      columnNumber: 7
     }
   })));
 }

@@ -21,16 +21,33 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
 
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  
   body{
+    background-color: #292929;
     font-family: 'Industry', sans-serif;
+  }
+  
+  #__next{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
   }
 `
 
 export default function MyApp({ Component, pageProps }){
   return(
     <>
-    <GlobalStyle />
-    <Component {...pageProps} />
+      <GlobalStyle />
+      <Component {...pageProps} />
     </>
   )
 }

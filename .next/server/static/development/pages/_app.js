@@ -134,8 +134,25 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobal
     font-style: normal;
   }
 
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  
   body{
+    background-color: #292929;
     font-family: 'Industry', sans-serif;
+  }
+  
+  #__next{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
   }
 `;
 function MyApp({
@@ -146,15 +163,15 @@ function MyApp({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 5
+      lineNumber: 49,
+      columnNumber: 7
     }
   }), __jsx(Component, _extends({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 5
+      lineNumber: 50,
+      columnNumber: 7
     }
   })));
 }

@@ -17,7 +17,7 @@ const MainContainer = styled.main`
 
   @media ${standard.desktop} {
     max-width: 50%;
-    grid-template-rows: 10% 1fr;
+    grid-template-rows: 8% 1fr;
   }
   
   @media ${retina.laptopM} {
@@ -103,41 +103,15 @@ const SiteDetailsContainer = styled.div`
 `
 
 const Layout = props => (
-  <>
-
-    <MainContainer>
-      <CompanyContainer>
-        <CompanyName>{props.company_name}</CompanyName>
-        <SiteName>{props.site_name}</SiteName>
-      </CompanyContainer>
-      <SiteDetailsContainer>
-        { props.children }
-      </SiteDetailsContainer>
-    </MainContainer>
-    
-    <style jsx global>{`
-      *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-size: 10px;
-      }
-      
-      body{
-        background-color: #292929;
-      }
-      
-      #__next{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-      }
-    `}</style>
-
-  </>
+  <MainContainer>
+    <CompanyContainer>
+      <CompanyName>{props.company_name}</CompanyName>
+      <SiteName>{props.site_name}</SiteName>
+    </CompanyContainer>
+    <SiteDetailsContainer>
+      { props.children }
+    </SiteDetailsContainer>
+  </MainContainer>
 )
 
 export default Layout
