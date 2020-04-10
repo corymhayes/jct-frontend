@@ -23,7 +23,6 @@ const Trend = props => {
         pointBackgroundColor: color.jctOrange,
         backgroundColor: gradient,
         cubicInterpolationMode: 'monotone',
-        // lineTension: 0
       }]
     }
   }
@@ -34,7 +33,8 @@ const Trend = props => {
         data={ data }
         options={{
           legend: false,
-          // tooltips: false,
+          tooltips: false,
+          hover: false,
           scales: {
             // Left side of graph
             yAxes: [{

@@ -25,12 +25,13 @@ const DoughnutChart = props => {
             cutoutPercentage: 80, 
             rotation: (-1.25 * Math.PI),
             circumference: (1.5 * Math.PI),
-            tooltips: false
+            tooltips: false,
+            hover: false
           }}
         />
       </Graph>
       <Volume>
-        <CurrentVolume>{props.currentValue}</CurrentVolume>
+        <CurrentVolume>{ props.currentValue !== null ? props.currentValue.toFixed(2) : props.currentValue }</CurrentVolume>
         <CurrentVolumeLabel>Volume</CurrentVolumeLabel>
       </Volume>
     </GraphContainer>

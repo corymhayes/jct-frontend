@@ -60,8 +60,8 @@ const Alarms = props => (
     <Title>Alarms</Title>
 
     <AlarmList>
-      <AlarmListItem>On: {props.on}</AlarmListItem>
-      <AlarmListItem>Off: {props.off}</AlarmListItem>
+      <AlarmListItem>On: { props.on !== null ? props.on.toFixed(2) : props.on }</AlarmListItem>
+      <AlarmListItem>Off: { props.off !== null ? props.off.toFixed(2) : props.off }</AlarmListItem>
     </AlarmList>
   </Container>
 )

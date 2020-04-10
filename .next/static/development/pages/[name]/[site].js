@@ -66,14 +66,14 @@ var Alarms = function Alarms(props) {
       lineNumber: 63,
       columnNumber: 7
     }
-  }, "On: ", props.on), __jsx(AlarmListItem, {
+  }, "On: ", props.on !== null ? props.on.toFixed(2) : props.on), __jsx(AlarmListItem, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64,
       columnNumber: 7
     }
-  }, "Off: ", props.off)));
+  }, "Off: ", props.off !== null ? props.off.toFixed(2) : props.off)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Alarms);
@@ -284,7 +284,8 @@ var DoughnutChart = function DoughnutChart(props) {
       cutoutPercentage: 80,
       rotation: -1.25 * Math.PI,
       circumference: 1.5 * Math.PI,
-      tooltips: false
+      tooltips: false,
+      hover: false
     },
     __self: _this,
     __source: {
@@ -296,21 +297,21 @@ var DoughnutChart = function DoughnutChart(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 7
     }
   }, __jsx(CurrentVolume, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 34,
       columnNumber: 9
     }
-  }, props.currentValue), __jsx(CurrentVolumeLabel, {
+  }, props.currentValue !== null ? props.currentValue.toFixed(2) : props.currentValue), __jsx(CurrentVolumeLabel, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 35,
       columnNumber: 9
     }
   }, "Volume")));
@@ -598,8 +599,7 @@ var Trend = function Trend(props) {
         borderColor: _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["color"].jctOrange,
         pointBackgroundColor: _public_screensizes__WEBPACK_IMPORTED_MODULE_3__["color"].jctOrange,
         backgroundColor: gradient,
-        cubicInterpolationMode: 'monotone' // lineTension: 0
-
+        cubicInterpolationMode: 'monotone'
       }]
     };
   };
@@ -608,14 +608,15 @@ var Trend = function Trend(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 31,
       columnNumber: 5
     }
   }, __jsx(react_chartjs_2__WEBPACK_IMPORTED_MODULE_1__["Line"], {
     data: data,
     options: {
       legend: false,
-      // tooltips: false,
+      tooltips: false,
+      hover: false,
       scales: {
         // Left side of graph
         yAxes: [{
@@ -640,7 +641,7 @@ var Trend = function Trend(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 32,
       columnNumber: 7
     }
   }));
