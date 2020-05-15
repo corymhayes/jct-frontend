@@ -34,6 +34,7 @@ const Title = styled.h3`
 
 const AlarmList = styled.ul`
   list-style: none;
+  margin-bottom: 1rem;
 `
 
 const AlarmListItem = styled.li`
@@ -57,11 +58,11 @@ const AlarmListItem = styled.li`
 
 const Alarms = props => (
   <Container>
-    <Title>Alarms</Title>
+    <Title>{props.title}</Title>
 
     <AlarmList>
-      <AlarmListItem>On: { props.on !== null ? props.on.toFixed(2) : props.on }</AlarmListItem>
-      <AlarmListItem>Off: { props.off !== null ? props.off.toFixed(2) : props.off }</AlarmListItem>
+      <AlarmListItem>On: { props.on !== undefined ? props.on.toFixed(2) : props.on }</AlarmListItem>
+      <AlarmListItem>Off: { props.off !== undefined ? props.off.toFixed(2) : props.off }</AlarmListItem>
     </AlarmList>
   </Container>
 )

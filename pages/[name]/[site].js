@@ -1,3 +1,5 @@
+import { Component } from 'react'
+import io from 'socket.io-client'
 import fetch from 'isomorphic-unfetch'
 
 import Layout from '../../components/Layout'
@@ -5,14 +7,42 @@ import MobileLayout from '../../components/MobileLayout'
 import Details from '../../components/Details'
 
 
-const Home = props => {
-  return(
-    <>
-      {
-        props.isMobileView ?
-          <MobileLayout company_name="Doghouse Oil & Gas" site_name="Anchor Battery">
+export default class Site extends Component {
+
+  static defaultProps = {
+    company: []
+  }
+
+  state = {
+    companies: []
+  }
+  
+  static async getInitialProps(ctx){
+    const { name, site } = ctx.query
+    const res = await fetch(`http://jct-systems.com/api/${name}/${site}`)
+    const json = await res.json();
+    
+    let isMobileView = ctx.req.headers['user-agent'].search(/Android|iPhone/i)
+    
+    if(isMobileView < 0){
+      return {
+        isMobileView: false,
+        equipment: json[1]
+      }
+    } else {
+      return {
+        isMobileView: true,
+        equipment: json[1]
+      }
+    }
+  }
+
+  render(){
+    return(
+        this.props.isMobileView ?
+        <MobileLayout company_name="Doghouse Oil & Gas" site_name="Anchor Battery">
             {
-              props.equipment.map(equip => (
+              this.props.equipment.map(equip => (
                 <Details 
                   key={equip.id} 
                   name={equip.name}
@@ -31,10 +61,10 @@ const Home = props => {
               ))
             }
           </MobileLayout>
-        :
+        :       
           <Layout company_name="Doghouse Oil & Gas" site_name="Anchor Battery">
             {
-              props.equipment.map(equip => (
+              this.props.equipment.map(equip => (
                 <Details 
                   key={equip.id} 
                   name={equip.name}
@@ -52,36 +82,7 @@ const Home = props => {
                 />
               ))
             }
-          </Layout>
-      }
-    </>
-  )
-}
-
-export async function getServerSideProps(ctx){
-  const { name, site } = ctx.params
-  const res = await fetch(`http://jct-systems.com/api/${name}/${site}`);
-  const json = await res.json();
-
-  let isMobileView = ctx.req.headers['user-agent'].search(/Android|iPhone/i)
-
-
-  if(isMobileView < 0){
-    return {
-      props: {
-        isMobileView: false,
-        equipment: json[1]
-      }
-    }
-  } else {
-    return {
-      props: {
-        isMobileView: true,
-        equipment: json[1]
-      }
-    }
+          </Layout>          
+    )
   }
-
 }
-
-export default Home

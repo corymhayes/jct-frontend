@@ -15,16 +15,16 @@ const MainContainer = styled.main`
     grid-template-rows: 15% 85%;
   }
 
-  @media ${standard.desktop} {
-    max-width: 50%;
-    grid-template-rows: 8% 1fr;
-  }
-  
-  @media ${retina.laptopM} {
+  @media ${standard.laptopS} {
     width: 65%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 12% 90%;
   }
 
+  @media ${standard.desktop} {
+    height: 60vh;
+    max-width: 30%;
+    grid-template-rows: 12% 1fr;
+  }
 `
 
 const CompanyContainer = styled.div`
@@ -51,10 +51,10 @@ const CompanyName = styled.h1`
   }
 `
 
-
 const SiteName = styled.h2`
   font-weight: 600;
   color: #FF7E26;
+  margin-bottom: .5rem;
 
   @media ${standard.tablet} {
     font-size: 2rem;
@@ -67,6 +67,13 @@ const SiteName = styled.h2`
   @media ${retina.laptopM} {
     font-size: 2.75rem;
   }
+`
+
+const DateTime = styled.h3`
+  color: rgba(255,255,255,.5);
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-left: .25rem;
 `
 
 const SiteDetailsContainer = styled.div`
@@ -89,9 +96,9 @@ const SiteDetailsContainer = styled.div`
   }
   
   @media ${standard.desktop} {
-    padding: 6rem 27rem 6rem 6rem;
-    grid: auto-flow / repeat(4, 25%);
-    grid-gap: 10rem 7rem;
+    padding: 6rem 20rem 6rem 6rem;
+    grid: auto-flow / repeat(3, 33%);
+    grid-gap: 0rem 7rem;
 
   }
   
@@ -107,6 +114,7 @@ const Layout = props => (
     <CompanyContainer>
       <CompanyName>{props.company_name}</CompanyName>
       <SiteName>{props.site_name}</SiteName>
+      <DateTime>{props.date} - {props.time}</DateTime>
     </CompanyContainer>
     <SiteDetailsContainer>
       { props.children }

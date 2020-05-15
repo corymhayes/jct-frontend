@@ -9,7 +9,17 @@ const DoughnutChart = props => {
   const data = {
     datasets: [{
       data: [props.currentValue, (props.totalValue - props.currentValue)],
-      backgroundColor: [ color.jctOrange, 'rgba(0,0,0, .05)' ],
+      // backgroundColor: [ color.jctOrange, 'rgba(0,0,0, .05)' ],
+      backgroundColor: (ctx) => {
+        // const i = ctx.dataIndex
+        if(ctx.dataset.data[0] < props.alarmOff){
+        return [ 'lightgreen', 'rgba(0,0,0,.05)' ]
+      } else if(ctx.dataset.data[0] > props.alarmOn){
+          return [ 'red', 'rgba(0,0,0,.05)' ]
+        } else {
+          return [ '#ffcc00', 'rgba(0,0,0,.05)' ]
+        }
+      },
       borderWidth: 0
     }]
   }
@@ -32,7 +42,7 @@ const DoughnutChart = props => {
       </Graph>
       <Volume>
         <CurrentVolume>{ props.currentValue !== null ? props.currentValue.toFixed(2) : props.currentValue }</CurrentVolume>
-        <CurrentVolumeLabel>Volume</CurrentVolumeLabel>
+        <CurrentVolumeLabel>{props.unitOfMeasure}</CurrentVolumeLabel>
       </Volume>
     </GraphContainer>
   )

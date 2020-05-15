@@ -14,21 +14,30 @@ const MobileCompanyContainer = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: center;
+  padding: 0 4rem;
 `
 
 const MobileCompanyName = styled.h1`
   font-size: 3rem;
   font-weight: 600;
-  margin-left: 4rem;
   color: ${color.jctWhite};
 `
-
 
 const MobileSiteName = styled.h2`
   font-size: 2rem;
   font-weight: 600;
   color: ${color.jctOrange};
-  margin-left: 4rem;
+`
+
+const DateTime = styled.h3`
+  color: rgba(255,255,255,.5);
+  font-size: 1.75rem;
+  font-weight: 400;
+`
+
+const MobileCarouselContainer = styled.div`
+  display: grid;
+  grid-row-gap: 1rem;
 `
 
 
@@ -38,13 +47,14 @@ const MobileLayout = props => (
       <MobileCompanyContainer>
         <MobileCompanyName>{props.company_name}</MobileCompanyName>
         <MobileSiteName>{props.site_name}</MobileSiteName>
+        <DateTime>{props.date} - {props.time}</DateTime>
       </MobileCompanyContainer>
-      <MobileCarousel>
+      <MobileCarouselContainer>
         {props.children}
-      </MobileCarousel>
+      </MobileCarouselContainer>
     </MobileMainContainer>
      
-    <style jsx global>{`
+    {/* <style jsx global>{`
       *{
         margin: 0;
         padding: 0;
@@ -65,7 +75,7 @@ const MobileLayout = props => (
         align-items: center;
         justify-content: center;
       }
-    `}</style>
+    `}</style> */}
 
   </>
 )
