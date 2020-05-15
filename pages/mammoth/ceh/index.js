@@ -19,6 +19,15 @@ const Home = ({ data, isMobileView }) => (
         alarmOn={data[0].V5}
         alarmOff={data[0].V6}
       />
+
+      <Details 
+        name={data[0].S3} 
+        currentValue={data[0].V2}
+        totalValue={16}
+        unitOfMeasure={data[0].S4.toLowerCase()}
+        tPumpOn={data[0].V3}
+        tPumpOff={data[0].V4}
+      />
     </MobileLayout>
     :
     <Layout company_name={"Mammoth"} site_name={"CEH"} date={data[0].mDate} time={`${data[0].mTime.substr(0, 4)} ${data[0].mTime.substr(-2)}`}>
