@@ -23,10 +23,6 @@
     "/jct/jctbty": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/mammoth/university": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }
