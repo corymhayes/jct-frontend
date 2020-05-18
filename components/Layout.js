@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { standard, retina, color } from '../public/screensizes'
+import Sidebar from './Sidebar'
 
 const MainContainer = styled.main`
   height: 100vh;
@@ -111,6 +112,7 @@ const SiteDetailsContainer = styled.div`
 
 const Layout = props => (
   <MainContainer>
+    <Sidebar companyName="Mammoth" siteName="CEH" />
     <CompanyContainer>
       <CompanyName>{props.company_name}</CompanyName>
       <SiteName>{props.site_name}</SiteName>
