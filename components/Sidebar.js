@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 import { standard, retina, color } from '../public/screensizes'
+import Link from 'next/link'
 
 const SidebarContainer = styled.div`
-  height: 100vh;
-  width: 30rem;
   background-color: ${color.jctOrange};
   display: grid;
   grid-template-rows: 6% 1fr;
-  position: fixed;
+  position: sticky;
 `
 
 const CompanyNameContainer = styled.div`
@@ -24,7 +23,7 @@ const CompanyName = styled.h1`
 
 const SiteListContainer = styled.div`
   padding-top: 1rem;
-  padding-left: 2rem;
+  padding-left: 3rem;
 `
 
 const SiteList = styled.ul`
@@ -34,10 +33,16 @@ const SiteList = styled.ul`
   h2{
     color: #fff;
     font-size: 2.3rem;
+    margin-bottom: 2rem;
   }
   
   li a{
     text-decoration: none;
+  }
+
+  li a span:hover{
+    border-left: 5px solid #fff;
+    margin-left: -5px;
   }
 
   li a span{
@@ -45,12 +50,9 @@ const SiteList = styled.ul`
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    padding-left: 1rem;
+    padding-left: 3rem;
     font-size: 1.8rem;
     color: #fff;
-  }
-
-  li a span:hover{
     background-color: rgba(255,255,255,.125);
   }
 `
@@ -66,14 +68,14 @@ const Sidebar = props => (
       <SiteList>
         <h2>Sites</h2>
         <li>
-          <a href="#">
-            <span>{props.siteName}</span>
-          </a>
+          <Link href='../mammoth/university'>
+            <a><span>University</span></a>
+          </Link>
         </li>
         <li>
-          <a href="#">
-            <span>{props.siteName}</span>
-          </a>
+          <Link href='../mammoth/ceh'>
+            <a><span>ceh</span></a>
+          </Link>
         </li>
       </SiteList>
     </SiteListContainer>

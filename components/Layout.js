@@ -4,6 +4,12 @@ import Sidebar from './Sidebar'
 
 const MainContainer = styled.main`
   height: 100vh;
+  width: 100vw;
+  display: grid; 
+  grid-template-columns: 25% 1fr;
+`
+
+const ContentContainer = styled.div`
   display: grid;
   
   @media ${standard.tabletP}{
@@ -23,7 +29,7 @@ const MainContainer = styled.main`
 
   @media ${standard.desktop} {
     height: 60vh;
-    max-width: 30%;
+    max-width: 30%; 
     grid-template-rows: 12% 1fr;
   }
 `
@@ -111,17 +117,19 @@ const SiteDetailsContainer = styled.div`
 `
 
 const Layout = props => (
-  <MainContainer>
-    <Sidebar companyName="Mammoth" siteName="CEH" />
-    <CompanyContainer>
-      <CompanyName>{props.company_name}</CompanyName>
-      <SiteName>{props.site_name}</SiteName>
-      <DateTime>{props.date} - {props.time}</DateTime>
-    </CompanyContainer>
-    <SiteDetailsContainer>
-      { props.children }
-    </SiteDetailsContainer>
-  </MainContainer>
+  <>
+    <Sidebar companyName="Mammoth" />
+    <ContentContainer>
+      <CompanyContainer>
+        <CompanyName>{props.company_name}</CompanyName>
+        <SiteName>{props.site_name}</SiteName>
+        <DateTime>{props.date} - {props.time}</DateTime>
+      </CompanyContainer>
+      <SiteDetailsContainer>
+        { props.children }
+      </SiteDetailsContainer>
+    </ContentContainer>
+  </>
 )
 
 export default Layout

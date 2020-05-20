@@ -147,12 +147,10 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobal
   }
   
   #__next{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 30rem 1fr;
   }
 `;
 function MyApp({
@@ -163,14 +161,14 @@ function MyApp({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 47,
       columnNumber: 7
     }
   }), __jsx(Component, _extends({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 48,
       columnNumber: 7
     }
   })));
