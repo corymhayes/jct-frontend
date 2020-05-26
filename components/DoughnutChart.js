@@ -26,6 +26,7 @@ const DoughnutChart = props => {
 
   return (
     <GraphContainer>
+      <GraphTitle>{props.name}</GraphTitle>
       <Graph>
         <Doughnut 
           data={ data }
@@ -53,31 +54,41 @@ export default DoughnutChart
 
 const GraphContainer = styled.div`
   display: grid;
-  grid: 1fr / 1fr;
-  place-items: center;
+  grid: 25% 1fr / 1fr;
+  place-items: center center;
+  width: 20rem;
+  height: 15rem;
+`
+const GraphTitle = styled.h1`
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 2.4rem;
 `
 
 const Graph = styled.div`
-  grid-row: 1;
   grid-column: 1;
+  grid-row: 2;
 `
 
 const Volume = styled.div`
-  grid-row: 1;
   grid-column: 1;
+  grid-row: 2;
   display: flex;
-  flex-flow: column;
   align-items: center;
+  justify-content: center;
   margin-top: 1.5rem;
 `
 
 const CurrentVolume = styled.div`
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: ${color.jctDarkGray};
   font-weight: bold;
 `
 
 const CurrentVolumeLabel = styled.div`
-  font-size: 1.5rem;
-  color: ${color.jctLightGray};
+  font-size: 1.8rem;
+  color: ${color.jctDarkGray};
+  align-self: flex-end;
+  margin-bottom: .1rem;
+  margin-left: .2rem;
 `

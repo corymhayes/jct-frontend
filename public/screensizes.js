@@ -1,7 +1,7 @@
 const color = {
   jctOrange: '#ff7e26',
   jctWhite: '#fcfcfc',
-  jctDarkGray: '#464646',
+  jctDarkGray: '#292929',
   jctLightGray: '#a2a2a2'
 }
 
