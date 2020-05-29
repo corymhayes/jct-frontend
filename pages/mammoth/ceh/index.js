@@ -14,7 +14,7 @@ import MobileGaugeChart from '../../../components/mobile/GaugeChart'
 const CEH = ({ data, sites }) => (
   isMobile ?
     <MobileLayout 
-      sites={ sites.map((site, i) => <li key={i}><Link href={`/mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+      sites={ sites.map((site, i) => <li key={i}><Link href={`./mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
       company={'mammoth'}
       sitename={'CEH'} 
       date={data[0].mDate} 
@@ -37,7 +37,7 @@ const CEH = ({ data, sites }) => (
     </MobileLayout>
   :
     <BrowserLayout 
-      sites={ sites.map((site, i) => <li key={i}><Link href={`/mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+      sites={ sites.map((site, i) => <li key={i}><Link href={`./mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
       company={'mammoth'}
       sitename={'CEH'} 
       date={data[0].mDate} 
