@@ -26,7 +26,7 @@ module.exports = withFonts(
       }
       return config;
     },
-    distDir: 'build'
-    // assetPrefix: 'https://jctsystems.com/portal/jct-frontend'
+    distDir: 'build',
+    assetPrefix: 'https://jctsystems.com/portal/jct-frontend'
   })
 );
