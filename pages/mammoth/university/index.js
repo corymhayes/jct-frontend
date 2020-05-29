@@ -66,10 +66,10 @@ const University = ({ data, sites }) => (
 )
 
 export async function getServerSideProps(ctx){
-  const res = await fetch('http://jct-systems.com/api/university')
+  const res = await fetch('http://jct-systems.com/api/mammoth/university')
   const data = await res.json();
 
-  const res1 = await fetch('http://localhost:3001/api/mammoth')
+  const res1 = await fetch('http://jct-systems.com/api/mammoth')
   const sites = await res1.json();
     
   return {

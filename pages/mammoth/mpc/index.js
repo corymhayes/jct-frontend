@@ -218,8 +218,8 @@ const North = ({ data, sites }) => (
 )
 
 export async function getServerSideProps(ctx){
-  const res1 = await fetch('http://localhost:3001/api/mammoth')
-  const res = await fetch('http://localhost:3001/api/mammoth/mpc')
+  const res1 = await fetch('http://jct-systems.com/api/mammoth')
+  const res = await fetch('http://jct-systems.com/api/mammoth/mpc')
   
   const sites = await res1.json();
   const data = await res.json();

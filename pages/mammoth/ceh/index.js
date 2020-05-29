@@ -61,8 +61,8 @@ const CEH = ({ data, sites }) => (
 )
 
 export async function getServerSideProps(ctx){
-  const res = await fetch('http://jct-systems.com/api/ceh')
-  const res1 = await fetch('http://localhost:3001/api/mammoth')
+  const res = await fetch('http://jct-systems.com/api/mammoth/ceh')
+  const res1 = await fetch('http://jct-systems.com/api/mammoth')
   
   const data = await res.json()
   const sites = await res1.json()
