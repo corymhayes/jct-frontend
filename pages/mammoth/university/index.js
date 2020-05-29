@@ -1,78 +1,68 @@
-import styled from 'styled-components'
 import fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
+import { BrowserView, MobileView } from 'react-device-detect'
 
-import Layout from '../../../components/Layout'
-import NewLayout from '../../../components/NewLayout'
-import MobileLayout from '../../../components/MobileLayout'
-import FullDetails from '../../../components/FullDetails'
-import Details from '../../../components/Details'
-import NewDetails from '../../../components/NewDetails'
-import DoughnutChart from '../../../components/DoughnutChart'
+import BrowserLayout from '../../../components/browser/Layout'
+import BrowserDetails from '../../../components/browser/Details'
+import BrowserGaugeChart from '../../../components/browser/GaugeChart'
+
+import MobileLayout from '../../../components/mobile/Layout'
+import MobileDetails from '../../../components/mobile/Details'
+import MobileGaugeChart from '../../../components/mobile/GaugeChart'
 
 
-const Home = ({ data, sites, isMobileView }) => (
-  // isMobileView ?
-  //   <MobileLayout company_name={"Mammoth"} site_name={"University"} date={data[0].mDate} time={`${data[0].mTime.substr(0, 4)} ${data[0].mTime.substr(-2)}`}>
-  //     <FullDetails 
-  //       name={data[0].S1} 
-  //       currentValue={data[0].V1}
-  //       totalValue={16}
-  //       unitOfMeasure={data[0].S2.toLowerCase()}
-  //       tPumpOn={data[0].V3}
-  //       tPumpOff={data[0].V4}
-  //       alarmOn={data[0].V5}
-  //       alarmOff={data[0].V6}
-  //     />
-  //     <Details 
-  //       name={data[0].S3} 
-  //       currentValue={data[0].V2}
-  //       totalValue={16}
-  //       unitOfMeasure={data[0].S4.toLowerCase()}
-  //     />
-  //   </MobileLayout>
-  //   :
-    // <NewLayout site_name={"University"} date={data[0].mDate} time={`${data[0].mTime.substr(0, 4)} ${data[0].mTime.substr(-2)}`}>
-    //   <FullDetails 
-    //     name={data[0].S1} 
-    //     currentValue={data[0].V1}
-    //     totalValue={16}
-    //     unitOfMeasure={data[0].S2.toLowerCase()}
-    //     tPumpOn={data[0].V3}
-    //     tPumpOff={data[0].V4}
-    //     alarmOn={data[0].V5}
-    //     alarmOff={data[0].V6}
-    //   />
-    //   <Details 
-    //     name={data[0].S3} 
-    //     currentValue={data[0].V2}
-    //     totalValue={16}
-    //     unitOfMeasure={data[0].S4.toLowerCase()}
-    //   />
-    // </NewLayout>
-
-  <NewLayout 
-    company='mammoth'
-    sites={ sites.map((site, i) => <li key={i}><Link href={`/mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
-    sitename={"University"} 
-    date={data[0].mDate} 
-    time={data[0].mTime}
-  >
-    <NewDetails
-      resourceType='Water'
-      name={data[0].S1} 
-      unitOfMeasure={data[0].S2.toLowerCase()}
-      currentValue={data[0].V1}
-      totalValue={16}
-      tpumpOn={data[0].V3}
-      tpumpOff={data[0].V4}
-      alarmOn={data[0].V5}
-      alarmOff={data[0].V6}
+const University = ({ data, sites }) => (
+  <>
+  <BrowserView>
+    <BrowserLayout 
+      company='mammoth'
+      sites={ sites.map((site, i) => <li key={i}><Link href={`/mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+      sitename={"University"} 
+      date={data[0].mDate} 
+      time={data[0].mTime}
     >
-      <DoughnutChart name={data[0].S1} currentValue={data[0].V1} totalValue={16} unitOfMeasure={data[0].S2.toLowerCase()} />
-      <DoughnutChart name={data[0].S3} currentValue={data[0].V2} totalValue={16} unitOfMeasure={data[0].S4.toLowerCase()} />
-    </NewDetails>
-  </NewLayout>
+      <BrowserDetails
+        resourceType='Water'
+        name={data[0].S1} 
+        unitOfMeasure={data[0].S2.toLowerCase()}
+        currentValue={data[0].V1}
+        totalValue={16}
+        tpumpOn={data[0].V3}
+        tpumpOff={data[0].V4}
+        alarmOn={data[0].V5}
+        alarmOff={data[0].V6}
+      >
+        <BrowserGaugeChart name={data[0].S1} currentValue={data[0].V1} totalValue={16} unitOfMeasure={data[0].S2.toLowerCase()} />
+        <BrowserGaugeChart name={data[0].S3} currentValue={data[0].V2} totalValue={16} unitOfMeasure={data[0].S4.toLowerCase()} />
+      </BrowserDetails>
+    </BrowserLayout>
+  </BrowserView>
+  
+  <MobileView>
+    <MobileLayout 
+      company='mammoth'
+      sites={ sites.map((site, i) => <li key={i}><Link href={`/mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+      sitename={"University"} 
+      date={data[0].mDate} 
+      time={data[0].mTime}
+    >
+      <MobileDetails
+        resourceType='Water'
+        name={data[0].S1} 
+        unitOfMeasure={data[0].S2.toLowerCase()}
+        currentValue={data[0].V1}
+        totalValue={16}
+        tpumpOn={data[0].V3}
+        tpumpOff={data[0].V4}
+        alarmOn={data[0].V5}
+        alarmOff={data[0].V6}
+      >
+        <MobileGaugeChart name={data[0].S1} currentValue={data[0].V1} totalValue={16} unitOfMeasure={data[0].S2.toLowerCase()} />
+        <MobileGaugeChart name={data[0].S3} currentValue={data[0].V2} totalValue={16} unitOfMeasure={data[0].S4.toLowerCase()} />
+      </MobileDetails>
+    </MobileLayout>
+  </MobileView>
+  </>
 )
 
 export async function getServerSideProps(ctx){
@@ -81,19 +71,11 @@ export async function getServerSideProps(ctx){
 
   const res1 = await fetch('http://localhost:3001/api/mammoth')
   const sites = await res1.json();
-
-  let isMobileView = ctx.req.headers['user-agent'].search(/Android|iPhone/i)
     
-  if(isMobileView < 0){
-    return {
-      props: { data, sites, isMobileView: false }
-    }
-  } else {
-    return {
-      props: { data, sites, isMobileView: true }
-    }
+  return {
+    props: { data, sites }
   }
 } 
 
 
-export default Home
+export default University

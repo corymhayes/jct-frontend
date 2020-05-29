@@ -20,7 +20,7 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/jct/bty": [
+    "/mammoth/mpc": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

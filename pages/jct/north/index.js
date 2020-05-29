@@ -1,39 +1,66 @@
-import styled from 'styled-components'
 import fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
+import { BrowserView, MobileView } from 'react-device-detect'
 
-import Layout from '../../../components/Layout'
 import NewLayout from '../../../components/NewLayout'
-import MobileLayout from '../../../components/MobileLayout'
-import MobileCarousel from '../../../components/MobileCarousel'
-import FullDetails from '../../../components/FullDetails'
-import Details from '../../../components/Details'
 import NewDetails from '../../../components/NewDetails'
 import DoughnutChart from '../../../components/DoughnutChart'
 
+import NewMobileLayout from '../../../components/NewMobileLayout'
+import NewMobileDetails from '../../../components/NewMobileDetails'
+import NewMobileDoughnutChart from '../../../components/NewMobileDoughnutChart'
+
 
 const North = ({ data, sites }) => (
-  <NewLayout
-    sites={ sites.map((site, i) => <li key={i}><Link href={`/jct/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
-    company={"jct"} 
-    sitename={"North"} 
-    date={data[0].mDate} 
-    time={data[0].mTime}
-  >
-    <NewDetails
-      resourceType='Water'
-      name={data[0].S1} 
-      unitOfMeasure={data[0].S2.toLowerCase()}
-      currentValue={data[0].V1}
-      totalValue={16}
-      tPumpOn={data[0].V3}
-      tPumpOff={data[0].V4}
-      alarmOn={data[0].V5}
-      alarmOff={data[0].V6}
+  <>
+  <BrowserView>
+    <NewLayout
+      sites={ sites.map((site, i) => <li key={i}><Link href={`/jct/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+      company={"jct"} 
+      sitename={"North"} 
+      date={data[0].mDate} 
+      time={data[0].mTime}
     >
-      <DoughnutChart name={data[0].S1} currentValue={data[0].V1} totalValue={16} unitOfMeasure={data[0].S2.toLowerCase()} />
-    </NewDetails>
-  </NewLayout>
+      <NewDetails
+        resourceType='Water'
+        name={data[0].S1} 
+        unitOfMeasure={data[0].S2.toLowerCase()}
+        currentValue={data[0].V1}
+        totalValue={16}
+        tPumpOn={data[0].V3}
+        tPumpOff={data[0].V4}
+        alarmOn={data[0].V5}
+        alarmOff={data[0].V6}
+      >
+        <DoughnutChart name={data[0].S1} currentValue={data[0].V1} totalValue={16} unitOfMeasure={data[0].S2.toLowerCase()} />
+      </NewDetails>
+    </NewLayout>
+  </BrowserView>
+
+  <MobileView>
+      <NewMobileLayout
+        sites={ sites.map((site, i) => <li key={i}><Link href={`/jct/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+        company={"jct"} 
+        sitename={"North"} 
+        date={data[0].mDate} 
+        time={data[0].mTime}
+      >
+        <NewMobileDetails
+          resourceType='Water'
+          name={data[0].S1} 
+          unitOfMeasure={data[0].S2.toLowerCase()}
+          currentValue={data[0].V1}
+          totalValue={16}
+          tPumpOn={data[0].V3}
+          tPumpOff={data[0].V4}
+          alarmOn={data[0].V5}
+          alarmOff={data[0].V6}
+        >
+          <NewMobileDoughnutChart name={data[0].S1} currentValue={data[0].V1} totalValue={16} unitOfMeasure={data[0].S2.toLowerCase()} />
+        </NewMobileDetails>
+      </NewMobileLayout>
+    </MobileView>
+  </>
 )
 
 export async function getServerSideProps(ctx){
@@ -42,9 +69,7 @@ export async function getServerSideProps(ctx){
   
   const sites = await res1.json();
   const data = await res.json();
-
-  console.log(data);
-
+  
   return {
     props: { data, sites }
   }
