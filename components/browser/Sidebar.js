@@ -62,7 +62,7 @@ const Sidebar = (props) => {
   return(
     <SidebarContainer>
       <CompanyContainer>
-        <img src={`/static/${props.company}-logo.png`} />
+        <img src={`../static/${props.company}-logo.png`} />
       </CompanyContainer>
       <SiteNavContainer>
         <h1>Sites</h1>

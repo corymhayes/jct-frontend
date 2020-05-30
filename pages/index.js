@@ -64,7 +64,7 @@ const LoginSide = styled.div`
 const Home = ({ data }) => (
   <Container>
     <LogoSide>
-      <img src="../static/jct-logo.png" />
+      <img src="./static/jct-logo.png" />
     </LogoSide>
     <LoginSide>
       <form>

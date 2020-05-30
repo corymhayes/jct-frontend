@@ -135,7 +135,7 @@ const MobileLayout = props => {
         }
       }}
     >
-      <Sidebar
+      {/* <Sidebar
       sidebar={
         <>
           <CompanyContainer>
@@ -165,7 +165,7 @@ const MobileLayout = props => {
           backgroundColor: 'rgba(255,255,255,0)'
         }
       }}
-      >
+      > */}
         <MobileMainContainer>
             <MobileCompanyContainer>
               <Menu onClick={() => setIsSiteMenuOpen(true)}>
@@ -183,7 +183,7 @@ const MobileLayout = props => {
               {props.children}
             </MobileCarouselContainer>
         </MobileMainContainer>
-      </Sidebar>
+      {/* </Sidebar> */}
     </Sidebar>
   )
 }
