@@ -16,7 +16,7 @@ const University = ({ data, sites }) => (
   <BrowserView>
     <BrowserLayout 
       company='mammoth'
-      sites={ sites.map((site, i) => <li key={i}><Link href={`./mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+      sites={ sites.map((site, i) => <li key={i}><Link href={`./${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
       sitename={"University"} 
       date={data[0].mDate} 
       time={data[0].mTime}
@@ -41,7 +41,7 @@ const University = ({ data, sites }) => (
   <MobileView>
     <MobileLayout 
       company='mammoth'
-      sites={ sites.map((site, i) => <li key={i}><Link href={`./mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+      sites={ sites.map((site, i) => <li key={i}><Link href={`./${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
       sitename={"University"} 
       date={data[0].mDate} 
       time={data[0].mTime}

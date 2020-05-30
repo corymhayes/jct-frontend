@@ -39,7 +39,7 @@ const North = ({ data, sites }) => (
   <>
   <BrowserView>
     <BrowserLayout
-      sites={ sites.map((site, i) => <li key={i}><Link href={`./mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+      sites={ sites.map((site, i) => <li key={i}><Link href={`./${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
       company={"mammoth"} 
       sitename={"Mary Price Compressor"} 
       date={data[0].mDate} 
@@ -128,7 +128,7 @@ const North = ({ data, sites }) => (
 
   <MobileView>
     <MobileLayout
-      sites={ sites.map((site, i) => <li key={i}><Link href={`./mammoth/${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
+      sites={ sites.map((site, i) => <li key={i}><Link href={`./${site.BATTERY.toLowerCase()}`}><a>{site.BATTERY}</a></Link></li>) } 
       company={"mammoth"} 
       sitename={"Mary Price Compressor"} 
       date={data[0].mDate} 
