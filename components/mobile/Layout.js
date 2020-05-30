@@ -175,9 +175,9 @@ const MobileLayout = props => {
                 <MobileSiteName>{props.sitename}</MobileSiteName>
                 <DateTime>{props.date} - {props.time}</DateTime>
               </NameDateTimeContainer>
-              <Menu onClick={() => setIsAlarmMenuOpen(true)}>
+              {/* <Menu onClick={() => setIsAlarmMenuOpen(true)}>
                 <img src='../static/alarm-icon.png' />
-              </Menu>
+              </Menu> */}
             </MobileCompanyContainer>
             <MobileCarouselContainer>
               {props.children}
