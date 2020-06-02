@@ -6,7 +6,7 @@ import MPCAlarmList from '../MPCAlarmList'
 
 const MobileMainContainer = styled.main`
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: grid;
   grid-template-rows: 7rem 1fr;
 `

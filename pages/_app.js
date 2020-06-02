@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /*  USE FOR PRODUCTION */  
-  @font-face{
+  /* @font-face{
     font-family: 'Industry';
     src: url('/portal/jct-frontend/static/fonts/Industry-Bold.woff2') format('woff2'),
          url('/portal/jct-frontend/static/fonts/Industry-Bold.woff') format('woff'),
@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
          url('/portal/jct-frontend/static/fonts/Industry-Medium.svg#Industry-Medium') format('svg');
     font-weight: 500;
     font-style: normal;
-  }
+  } */
 
   *{
     margin: 0;

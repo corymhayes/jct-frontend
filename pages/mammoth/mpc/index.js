@@ -123,7 +123,7 @@ const MPC = ({ data, sites }) => (
           </TableRow>
         </Table>
       </BrowserDetails>
-      <BrowserDetails resourceType="Alarms" isTable right start>
+      <BrowserDetails resourceType="Alarms" isTable right start="true">
         <MPCAlarmList />
       </BrowserDetails>
     </BrowserLayout>
