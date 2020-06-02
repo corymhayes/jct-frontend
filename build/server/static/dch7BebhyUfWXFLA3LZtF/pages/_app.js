@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	var installedModules = require('../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,23 +88,105 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "KqAr");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "KqAr":
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("1TCz");
+
+
+/***/ }),
+
+/***/ "1TCz":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyApp; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Dtiu");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-    
 
-    /* harmony default export */ __webpack_exports__["default"] = (function (ctx) {
-      return Promise.all([])
-    });
+const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"]`
+
+  /*  USE FOR DEVELOPMENT */
+  @font-face{
+    font-family: 'Industry';
+    src: url('/static/fonts/Industry-Bold.woff2') format('woff2'),
+         url('/static/fonts/Industry-Bold.woff') format('woff'),
+         url('/static/fonts/Industry-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family: 'Industry';
+    src: url('/static/fonts/Industry-Medium.woff2') format('woff2'),
+         url('/static/fonts/Industry-Medium.woff') format('woff'),
+         url('/static/fonts/Industry-Medium.ttf') format('truetype'),
+         url('/static/fonts/Industry-Medium.svg#Industry-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /*  USE FOR PRODUCTION */  
+  @font-face{
+    font-family: 'Industry';
+    src: url('/portal/jct-frontend/static/fonts/Industry-Bold.woff2') format('woff2'),
+         url('/portal/jct-frontend/static/fonts/Industry-Bold.woff') format('woff'),
+         url('/portal/jct-frontend/static/fonts/Industry-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family: 'Industry';
+    src: url('/portal/jct-frontend/static/fonts/Industry-Medium.woff2') format('woff2'),
+         url('/portal/jct-frontend/static/fonts/Industry-Medium.woff') format('woff'),
+         url('/portal/jct-frontend/static/fonts/Industry-Medium.ttf') format('truetype'),
+         url('/portal/jct-frontend/static/fonts/Industry-Medium.svg#Industry-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+  }
   
+  body{
+    font-family: 'Industry', sans-serif;
+  }
+`;
+function MyApp({
+  Component,
+  pageProps
+}) {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(GlobalStyle, null), __jsx(Component, pageProps));
+}
+
+/***/ }),
+
+/***/ "Dtiu":
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
+
+/***/ }),
+
+/***/ "cDcd":
+/***/ (function(module, exports) {
+
+module.exports = require("react");
 
 /***/ })
 
