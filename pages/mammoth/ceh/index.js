@@ -9,6 +9,7 @@ import BrowserGaugeChart from '../../../components/browser/GaugeChart'
 import MobileLayout from '../../../components/mobile/Layout'
 import MobileDetails from '../../../components/mobile/Details'
 import MobileGaugeChart from '../../../components/mobile/GaugeChart'
+import SidebarAlarm from '../../../components/SidebarAlarm'
 
 
 const CEH = ({ data, sites }) => (
@@ -19,6 +20,7 @@ const CEH = ({ data, sites }) => (
       sitename={'CEH'} 
       date={data[0].mDate} 
       time={data[0].mTime}
+      sidebarAlarm={<SidebarAlarm alarmOn={data[0].V5} alarmOff={data[0].V6} tpumpOn={data[0].V3} tpumpOff={data[0].V4}/>}
     >
       <MobileDetails
       resourceType='Water'

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{BkYf:function(n,o,w){(window.__NEXT_P=window.__NEXT_P||[]).push(["/jct/north",function(){return w("srvn")}])},srvn:function(n,o){}},[["BkYf",0]]]);

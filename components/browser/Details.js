@@ -7,6 +7,8 @@ const DetailsContainer = styled.div`
   display: flex;
   flex-flow: column;
   margin-bottom: 10rem;
+  grid-column: ${props => props.right ? 2 : 1};
+  grid-row: ${props => props.start ? '1 / 4' : 'auto'};
 `
 
 const NameAlarmsContainer = styled.div`
@@ -28,7 +30,7 @@ const DoughnutChartContainer = styled.div`
 
 
 const Details = props => (
-  <DetailsContainer>
+  <DetailsContainer right={props.right} start={props.start}>
     <NameAlarmsContainer>
       <DetailsName>{props.resourceType}</DetailsName>
       {

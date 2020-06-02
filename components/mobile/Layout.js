@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Sidebar from 'react-sidebar'
 import { color } from '../../public/screensizes'
 import { useState } from 'react'
+import MPCAlarmList from '../MPCAlarmList'
 
 const MobileMainContainer = styled.main`
   width: 100%;
@@ -99,6 +100,20 @@ const SiteLinks = styled.nav`
   }
 `
 
+const AlarmTitle = styled.div`
+  align-self: flex-start;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${color.jctDarkGray};
+  height: 4rem;
+  width: 10rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+`
+
 
 const MobileLayout = props => {
   const [isSiteMenuOpen, setIsSiteMenuOpen] = useState(false)
@@ -135,37 +150,31 @@ const MobileLayout = props => {
         }
       }}
     >
-      {/* <Sidebar
-      sidebar={
-        <>
-          <CompanyContainer>
-            <img src={`../static/${props.company}-logo.png`} />
-          </CompanyContainer>
-          <SiteNavContainer>
-            <h1>Sites</h1>
-            <SiteLinks>
-              <ul>
-                {props.sites}
-              </ul>
-            </SiteLinks>
-          </SiteNavContainer>
-        </>
-      }
-      open={isAlarmMenuOpen}
-      onSetOpen={setIsAlarmMenuOpen}
-      pullRight={true}
-      styles={{
-        sidebar: {
-          width: '30rem',
-          backgroundColor: `${color.jctDarkGray}`,
-          display: 'grid',
-          gridTemplateRows: '12.5rem 1fr'
-        },
-        overlay: {
-          backgroundColor: 'rgba(255,255,255,0)'
+      <Sidebar
+        sidebar={ 
+          <>
+            <AlarmTitle>Alarms</AlarmTitle>
+            {props.sidebarAlarm}
+          </>
         }
-      }}
-      > */}
+        open={isAlarmMenuOpen}
+        onSetOpen={setIsAlarmMenuOpen}
+        pullRight={true}
+        styles={{
+          sidebar: {
+            width: '33rem',
+            backgroundColor: '#fff',
+            display: 'flex',
+            flexFlow: 'column',
+            color: `${color.jctDarkGray}`,
+            marginTop: '19%',
+            paddingLeft: '3rem'
+          },
+          overlay: {
+            backgroundColor: 'rgba(255,255,255,0)'
+          }
+        }}
+      >
         <MobileMainContainer>
             <MobileCompanyContainer>
               <Menu onClick={() => setIsSiteMenuOpen(true)}>
@@ -175,15 +184,15 @@ const MobileLayout = props => {
                 <MobileSiteName>{props.sitename}</MobileSiteName>
                 <DateTime>{props.date} - {props.time}</DateTime>
               </NameDateTimeContainer>
-              {/* <Menu onClick={() => setIsAlarmMenuOpen(true)}>
+              <Menu onClick={() => setIsAlarmMenuOpen(true)}>
                 <img src='../static/alarm-icon.png' />
-              </Menu> */}
+              </Menu>
             </MobileCompanyContainer>
             <MobileCarouselContainer>
               {props.children}
             </MobileCarouselContainer>
         </MobileMainContainer>
-      {/* </Sidebar> */}
+      </Sidebar>
     </Sidebar>
   )
 }

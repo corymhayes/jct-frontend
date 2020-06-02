@@ -9,6 +9,7 @@ import BrowserGaugeChart from '../../../components/browser/GaugeChart'
 import MobileLayout from '../../../components/mobile/Layout'
 import MobileDetails from '../../../components/mobile/Details'
 import MobileGaugeChart from '../../../components/mobile/GaugeChart'
+import SidebarAlarm from '../../../components/SidebarAlarm'
 
 
 const University = ({ data, sites }) => (
@@ -45,6 +46,7 @@ const University = ({ data, sites }) => (
       sitename={"University"} 
       date={data[0].mDate} 
       time={data[0].mTime}
+      sidebarAlarm={<SidebarAlarm alarmOn={data[0].V5} alarmOff={data[0].V6} tpumpOn={data[0].V3} tpumpOff={data[0].V4}/>}
     >
       <MobileDetails
         resourceType='Water'
@@ -52,10 +54,6 @@ const University = ({ data, sites }) => (
         unitOfMeasure={data[0].S2.toLowerCase()}
         currentValue={data[0].V1}
         totalValue={16}
-        tpumpOn={data[0].V3}
-        tpumpOff={data[0].V4}
-        alarmOn={data[0].V5}
-        alarmOff={data[0].V6}
       >
         <MobileGaugeChart name={data[0].S1} currentValue={data[0].V1} totalValue={16} unitOfMeasure={data[0].S2.toLowerCase()} />
         <MobileGaugeChart name={data[0].S3} currentValue={data[0].V2} totalValue={16} unitOfMeasure={data[0].S4.toLowerCase()} />

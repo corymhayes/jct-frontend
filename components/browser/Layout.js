@@ -41,7 +41,8 @@ const DateTime = styled.h3`
 `
 
 const SiteDetails = styled.div`
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `
 
 

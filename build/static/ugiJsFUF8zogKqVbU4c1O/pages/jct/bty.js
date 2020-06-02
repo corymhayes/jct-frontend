@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{aHxD:function(n,w,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/jct/bty",function(){return o("xG8/")}])},"xG8/":function(n,w){}},[["aHxD",0]]]);

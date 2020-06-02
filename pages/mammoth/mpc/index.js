@@ -5,13 +5,13 @@ import { BrowserView, MobileView } from 'react-device-detect'
 
 import BrowserLayout from '../../../components/browser/Layout'
 import BrowserDetails from '../../../components/browser/Details'
-import BrowserGaugeChart from '../../../components/browser/GaugeChart'
 
 import MobileLayout from '../../../components/mobile/Layout'
 import MobileDetails from '../../../components/mobile/Details'
-import MobileGaugeChart from '../../../components/mobile/GaugeChart'
 
 import Table from '../../../components/Table'
+import MPCAlarmList from '../../../components/MPCAlarmList'
+
 
 const TableRow = styled.div`
   display: grid;
@@ -35,7 +35,7 @@ const CellData = styled.span`
 
 
 
-const North = ({ data, sites }) => (
+const MPC = ({ data, sites }) => (
   <>
   <BrowserView>
     <BrowserLayout
@@ -123,6 +123,9 @@ const North = ({ data, sites }) => (
           </TableRow>
         </Table>
       </BrowserDetails>
+      <BrowserDetails resourceType="Alarms" isTable right start>
+        <MPCAlarmList />
+      </BrowserDetails>
     </BrowserLayout>
   </BrowserView>
 
@@ -133,6 +136,7 @@ const North = ({ data, sites }) => (
       sitename={"Mary Price Compressor"} 
       date={data[0].mDate} 
       time={data[0].mTime}
+      sidebarAlarm={<MPCAlarmList />}
     >
       <MobileDetails resourceType='PSI' isTable>
         <Table>
@@ -230,4 +234,4 @@ export async function getServerSideProps(ctx){
 } 
 
 
-export default North
+export default MPC

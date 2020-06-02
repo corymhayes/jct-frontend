@@ -4,7 +4,7 @@ import { isBrowser } from 'react-device-detect'
 const TableContainer = styled.div`
   display: grid;
   grid-template: auto / 1fr;
-  width: 50%;
+  width: 75%;
 `
 
 const MobileTableContainer = styled.div`
