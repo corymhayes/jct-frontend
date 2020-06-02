@@ -18,7 +18,7 @@ const ListTitle = styled.div`
   font-weight: bold;
 `
 
-const DetailsAlarmContainer = styled.p`
+const DetailsAlarmContainer = styled.div`
   display: flex;
   flex-flow: column;
   margin-bottom: 1rem;
