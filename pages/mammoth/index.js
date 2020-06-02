@@ -65,7 +65,7 @@ const SiteList = styled.ul`
 const Home = ({ data }) => (
   <Container>
     <LogoSide>
-      <img src="../static/mammoth-logo.png" />
+      <img src="./static/mammoth-logo.png" />
     </LogoSide>
     <LoginSide>
       <SiteHeader>Sites</SiteHeader>
